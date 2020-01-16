@@ -8,3 +8,6 @@ coverage/
 
 # eslint
 eslint-report.json
+
+#
+node_modules/
