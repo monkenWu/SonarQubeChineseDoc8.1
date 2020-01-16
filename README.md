@@ -1,1 +1,0 @@
-# SonarQubeChineseDoc8.1
