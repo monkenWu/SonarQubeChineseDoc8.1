@@ -1,0 +1,10 @@
+# Gatsby files
+.cache/
+public
+
+# tests
+lcov.info
+coverage/
+
+# eslint
+eslint-report.json
