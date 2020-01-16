@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:93.75%/1.45 'Roboto',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Roboto',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#439ccd;}</style><link href="//fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css"/><title data-react-helmet="true">Plugin basics | SonarQube 文件</title><link data-react-helmet="true" href="/SonarQubeChineseDoc8.1/favicon.ico" rel="icon"/><link data-react-helmet="true" href="/SonarQubeChineseDoclatest/extend/developing-plugin/" rel="canonical"/><script data-react-helmet="true" type="text/javascript">
+            (function(window,document) {
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window, document,'script','https://www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-1880045-11' , 'auto');
+              ga('send', 'pageview');
+            })(window,document);
+          </script><style data-href="/SonarQubeChineseDoc8.1/styles.f03d06e729ae60785766.css">#___gatsby,#___gatsby>div,.main-container,body,html{height:100%}iframe{width:100%;border:0}.blue-bar{background:#4c9bd6;height:5px;position:fixed;width:100%;z-index:100}.layout-page{align-items:stretch;display:flex;flex-grow:1;height:100%;width:100%}.page-sidebar{flex-grow:0;flex-shrink:0;padding:26px 26px 0;width:320px;display:flex;flex-direction:column}.page-sidebar,.page-sidebar-inner{background-color:#f9f9fb;height:100%}.page-sidebar-inner{overflow:auto;position:fixed}.sidebar-header{border-bottom:1px solid #cfd3d7;padding-bottom:10px;margin-right:-6px}.sidebar-logo{vertical-align:top;margin:0}.sidebar-footer{border-top:1px solid #cfd3d7;flex-grow:0;font-size:12px}.sidebar-footer a{position:relative;display:inline-block;text-decoration:none;color:rgba(0,0,0,.8);line-height:30px;margin:10px 10px 10px -8px;padding:0 8px;border-radius:3px}.sidebar-footer a img,.sidebar-footer a svg{height:16px;color:#8a8c8f;margin-right:5px;margin-bottom:0;-webkit-transform:translateY(2px);transform:translateY(2px)}.sidebar-footer a.icon-only img{height:12px;margin-right:0}.sidebar-footer a:hover{background:#e8eff5}.page-sidebar .alert{margin:16px 0}.page-sidebar a .tooltip{opacity:0;background:rgba(0,0,0,.8);color:#fff;font-size:12px;border-radius:3px;line-height:24px;padding:0 8px;position:absolute;top:-30px;left:-50px;white-space:nowrap;-webkit-transition:opacity .2s ease;transition:opacity .2s ease}.page-sidebar a .tooltip:after{top:100%;right:20px;content:" ";height:0;width:0;position:absolute;pointer-events:none;border:6px solid transparent;border-top-color:rgba(0,0,0,.8);margin-left:-6px}.page-sidebar a:hover .tooltip{opacity:1;display:block}.page-main{background:#fff;display:flex;flex-direction:column;flex-grow:1;margin-left:330px;min-height:100%;min-width:740px;padding:20px 20px 0;z-index:50}.search-container{position:relative}.search-container button{position:absolute;right:8px;top:50%;margin-top:-12px;height:16px;width:16px;background:transparent;border:none;cursor:pointer;outline:none;border-radius:3px;-webkit-transition:border-color .2s ease,box-shadow .2s ease;transition:border-color .2s ease,box-shadow .2s ease}.search-container button svg{position:absolute;top:4px;left:4px}.search-container button:focus,.search-container button:hover{background-color:#989898}.search-container button:focus svg,.search-container button:hover svg{color:#fff}.search-container button:focus{box-shadow:0 0 0 3px rgba(35,106,151,.25)}.search-input{border:1px solid #cfd3d7;border-radius:2px;width:calc(100% - 10px);margin-left:10px;margin-bottom:10px;padding:0 30px 0 10px;font-size:14px;line-height:30px;outline:none}.search-input:focus,.search-input:hover{border:1px solid #8a8c8f}a.search-result{color:#444;font-weight:400;text-decoration:none;display:block;padding:8px;margin-right:-10px}a.search-result.active,a.search-result.active mark{color:#2679af}a.search-result:hover{background:#e8eff5;border-radius:3px}a.search-result mark{color:#444;font-weight:700;background:0 0}a.search-result .note{margin:6px 0;font-size:12px}.page-indexes{padding:16px 20px 50px 16px;margin:10px -26px 0;flex-grow:1;overflow:auto}.page-indexes>div>a.search-result{margin:0 -4px 0 4px}.page-indexes-link{color:#2d3032;font-size:16px;font-weight:500;line-height:35px;padding:0 10px;margin:0 -10px 0 0;border-radius:3px;-webkit-transition:all .2s ease;transition:all .2s ease}.page-indexes-link:hover{background-color:#e8eff5;color:#2679af}.page-indexes-link.active{font-weight:700;color:#2679af}.page-indexes-link,.sub-menu-link{color:inherit;text-decoration:inherit;display:block}.sub-menu .page-indexes-link,.sub-menu .sub-menu{margin-left:-10px}.page-indexes-link svg{float:right;-webkit-transform:translateY(9px);transform:translateY(9px)}.sub-menu{padding:0 0 10px 22px}.sub-menu-link{font-size:14px;line-height:26px;margin:0}.sub-menu-link.active,.sub-menu-link:hover{color:#2679af}.sub-menu-link.active{font-weight:700}.page-container{max-width:900px;min-width:320px;padding-left:16px;padding-right:16px;font-size:15px;flex-grow:1;margin:0 auto}.page-container .headings-container{width:200px;float:right;margin-top:80px}.page-container .headings-container-fixed{position:fixed;width:inherit;padding-left:26px;border-left:1px solid #cfd3d7;z-index:100;background:#fff}.page-container .headings-container span{font-weight:700}.page-container .headings-container ul{margin:10px 0 0;padding:0}.page-container .headings-container li{list-style:none;margin:0 0 8px;line-height:16px}.page-container .headings-container a{color:rgba(0,0,0,.8);display:block;font-size:13px;color:#2d3032;text-decoration:inherit;border-bottom:none!important}.page-container .headings-container a.active,.page-container .headings-container a:hover{color:#2679af}.page-container .headings-container a.active{font-weight:700}.markdown-container{width:680px;margin:0 auto;padding-top:24px;padding-bottom:24px}.headings-container+.markdown-container{max-width:900px;width:auto;padding-right:220px}.markdown-content img[src$=".svg"]{position:relative;top:-2px;vertical-align:text-bottom}.page-container h1{font-size:26px;font-weight:700}.page-container h2{font-size:21px;font-weight:700}.page-container h3{font-size:18px;font-weight:700}.page-container h2,.page-container h3{margin-top:32px;margin-bottom:14px}.page-container p{margin-bottom:14px}.page-container ul{margin-bottom:14px;padding-left:16px}.page-container li{margin-bottom:6px}.page-container li p{margin-bottom:0}.page-container li ul{margin-top:8px}.page-container pre{white-space:pre-wrap;word-wrap:break-word}.page-footer{border-top:1px solid #ced2d6;font-size:13px;margin:10px 10px 0;padding:12px 0}.page-footer img{float:right;margin-left:10px}.version-select{position:relative;font-size:19px;margin-top:12px;max-width:calc(100% - 160px);text-align:right;float:right;border-radius:4px}.version-select>button{padding:2px 4px;background:transparent;border:0;cursor:pointer;outline:none}.version-select:hover{background:#e8eff5}.version-select ul{z-index:1000;position:absolute;display:block;top:100%;margin-top:4px;right:0;border:1px solid #cfd3d7;background:#fff;text-align:left;border-radius:4px}.version-select ul li{list-style:none;font-size:15px;margin:0;padding:4px 16px;text-align:left;-webkit-transition:all .2s ease;transition:all .2s ease;white-space:nowrap}.version-select ul li:hover{background:#f3f3f3}.version-select ul li span{color:#b58a13;font-weight:700}.version-select ul li span.current{color:#499cd2}.version-select ul li a{color:inherit;text-decoration:inherit}.version-select span{color:#b58a13;font-weight:700;padding-right:4px}.version-select span.current{color:#499cd2}.targetted-heading{border-left:4px solid #499cd2;margin-left:-10px;padding-left:6px}.alert{display:block;margin:0 -1em 1.5rem;border:1px solid #3e7fb7;background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTEwLjMzMyAxMi4zNzV2LTEuNDU4YS4yODguMjg4IDAgMCAwLS4yOTEtLjI5MmgtLjg3NVY1Ljk1OGEuMjg4LjI4OCAwIDAgMC0uMjkyLS4yOTFINS45NThhLjI4OC4yODggMCAwIDAtLjI5MS4yOTF2MS40NTljMCAuMTY0LjEyNy4yOTEuMjkxLjI5MWguODc1djIuOTE3aC0uODc1YS4yODguMjg4IDAgMCAwLS4yOTEuMjkydjEuNDU4YzAgLjE2NC4xMjcuMjkyLjI5MS4yOTJoNC4wODRhLjI4OC4yODggMCAwIDAgLjI5MS0uMjkyek05LjE2NyA0LjIwOFYyLjc1YS4yODguMjg4IDAgMCAwLS4yOTItLjI5MmgtMS43NWEuMjg4LjI4OCAwIDAgMC0uMjkyLjI5MnYxLjQ1OGMwIC4xNjQuMTI4LjI5Mi4yOTIuMjkyaDEuNzVhLjI4OC4yODggMCAwIDAgLjI5Mi0uMjkyek0xNSA4YzAgMy44NjUtMy4xMzUgNy03IDdzLTctMy4xMzUtNy03IDMuMTM1LTcgNy03IDcgMy4xMzUgNyA3eiIgZmlsbD0iIzRiOWZkNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+);background-color:#edf6fc;background-position:10px 15px;background-repeat:no-repeat;background-size:24px;padding:1em 1em 1em 40px;color:#000;border-radius:3px}.alert a{padding-bottom:1px;text-decoration:none;-webkit-transition:border-bottom-color .2s ease 0s;transition:border-bottom-color .2s ease 0s;border-bottom:1px solid rgba(62,127,183,.3);color:#3e7fb7;font-weight:700}.alert a:focus,.alert a:hover{border-bottom:1px solid #0d476c;color:#0d476c}.alert>p{margin:0}.alert-danger{border-color:#d75a4a;background-color:#fcedec;background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTExLjQ3MyAxMC4wNmEuNTguNTggMCAwIDAtLjE3NC0uNDFMOS42NSA4bDEuNjUtMS42NWEuNTguNTggMCAwIDAgMC0uODNsLS44Mi0uODJhLjU4LjU4IDAgMCAwLS44MyAwTDggNi4zNSA2LjM1IDQuN2EuNTguNTggMCAwIDAtLjgzIDBsLS44Mi44MmEuNTguNTggMCAwIDAgMCAuODNMNi4zNSA4IDQuNyA5LjY1YS41OC41OCAwIDAgMCAwIC44M2wuODIuODJjLjExLjEwOS4yNjUuMTczLjQyLjE3M2EuNTguNTggMCAwIDAgLjQxLS4xNzRMOCA5LjY1bDEuNjUgMS42NWEuNTguNTggMCAwIDAgLjgzIDBsLjgyLS44MmEuNjAxLjYwMSAwIDAgMCAuMTczLS40MnpNMTUgOGMwIDMuODY1LTMuMTM1IDctNyA3cy03LTMuMTM1LTctNyAzLjEzNS03IDctNyA3IDMuMTM1IDcgN3oiIGZpbGw9IiNkNDMzM2YiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==)}.alert-danger a{border-bottom:1px solid rgba(215,90,74,.3);color:#d75a4a}.alert-danger a:focus,.alert-danger a:hover{border-bottom:1px solid #a82f1f;color:#a82f1f}.alert-warning{border-color:#c99916;background-color:#ffefbc;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMy4zNiAyMC4wODgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojY2RhMjUxfTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJkYW5nZXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTM1Ljg1NykiPjxnIGlkPSJHcm91cGVfNTcyMiIgZGF0YS1uYW1lPSJHcm91cGUgNTcyMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzNS44NTcpIj48ZyBpZD0iR3JvdXBlXzU3MjEiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjEiPjxwYXRoIGlkPSJUcmFjw6lfOTU2NCIgZGF0YS1uYW1lPSJUcmFjw6kgOTU2NCIgY2xhc3M9ImNscy0xIiBkPSJNMjMuMDU5IDUyLjc2M2wtOS41ODItMTUuODkxYTIuMSAyLjEgMCAwIDAtMy41OTQgMEwuMyA1Mi43NjNhMi4xIDIuMSAwIDAgMCAxLjggMy4xODJoMTkuMTYyYTIuMSAyLjEgMCAwIDAgMS44LTMuMTgyem0tMS4yOTQgMS4zNjhhLjU3OS41NzkgMCAwIDEtLjUuMjk0SDIuMWEuNTc4LjU3OCAwIDAgMS0uNDk1LS44NzZsOS41ODItMTUuODkxYS41NzguNTc4IDAgMCAxIC45ODkgMGw5LjU4MiAxNS44OTFhLjU3OC41NzggMCAwIDEgLjAwNy41ODJ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0zNS44NTcpIi8+PC9nPjwvZz48ZyBpZD0iR3JvdXBlXzU3MjQiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLjY1NyA0Mi4xMTQpIj48ZyBpZD0iR3JvdXBlXzU3MjMiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjMiPjxwYXRoIGlkPSJUcmFjw6lfOTU2NSIgZGF0YS1uYW1lPSJUcmFjw6kgOTU2NSIgY2xhc3M9ImNscy0xIiBkPSJNMjM0LjYwOCAxNzMuMDA1Yy0uNTc5IDAtMS4wMy4zMS0xLjAzLjg2MSAwIDEuNjc5LjIgNC4wOTIuMiA1Ljc3MSAwIC40MzcuMzgxLjYyMS44MzMuNjIxLjMzOSAwIC44MTgtLjE4My44MTgtLjYyMSAwLTEuNjc5LjItNC4wOTIuMi01Ljc3MWEuOTA3LjkwNyAwIDAgMC0xLjAyMS0uODYxeiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIzMy41NzggLTE3My4wMDUpIi8+PC9nPjwvZz48ZyBpZD0iR3JvdXBlXzU3MjYiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLjYxNCA1MC4zNDEpIj48ZyBpZD0iR3JvdXBlXzU3MjUiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjUiPjxwYXRoIGlkPSJUcmFjw6lfOTU2NiIgZGF0YS1uYW1lPSJUcmFjw6kgOTU2NiIgY2xhc3M9ImNscy0xIiBkPSJNMjMzLjczOCAzNTMuMzA2YTEuMDg3IDEuMDg3IDAgMSAwIDAgMi4xNzMgMS4wODcgMS4wODcgMCAwIDAgMC0yLjE3M3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzIuNjUxIC0zNTMuMzA2KSIvPjwvZz48L2c+PC9nPjwvc3ZnPg==)}.alert-warning a{border-bottom:1px solid rgba(201,153,22,.3);color:#c99916}.alert-warning a:focus,.alert-warning a:hover{border-bottom:1px solid #9b7713;color:#9b7713}.alert-success{border-color:#3ec92c;background-color:#ecfcf2;background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTEyLjcwMyA2LjUyM2EuNTkzLjU5MyAwIDAgMC0uMTY0LS40MTlsLS44My0uODJhLjU4LjU4IDAgMCAwLS40MS0uMTczLjU4LjU4IDAgMCAwLS40MS4xNzNsLTMuNzE4IDMuNzEtMi4wNi0yLjA2YS41OC41OCAwIDAgMC0uNDEtLjE3NC41OC41OCAwIDAgMC0uNDEuMTc0bC0uODMuODJhLjU5My41OTMgMCAwIDAtLjE2NC40MmMwIC4xNTQuMDU1LjMuMTY0LjQxbDMuMyAzLjI5OWMuMTA5LjExLjI2NC4xNzMuNDEuMTczLjE1NSAwIC4zMS0uMDY0LjQxOS0uMTczbDQuOTUtNC45NWEuNTcxLjU3MSAwIDAgMCAuMTYzLS40MXpNMTUgOGMwIDMuODY1LTMuMTM1IDctNyA3cy03LTMuMTM1LTctNyAzLjEzNS03IDctNyA3IDMuMTM1IDcgN3oiIGZpbGw9IiMwYTAiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==)}.alert-success a{border-bottom:1px solid rgba(62,201,44,.3);color:#3ec92c}.alert-success a:focus,.alert-success a:hover{border-bottom:1px solid #138b04;color:#138b04}.alert svg{vertical-align:middle;-webkit-transform:translateY(-1px);transform:translateY(-1px)}.page-sidebar .alert{margin-top:16px;font-size:12px}.page-container a,.page-footer a{text-decoration:none;color:#347cab;border-bottom:1px solid rgba(52,124,171,.3);-webkit-transition:all .2s ease 0s;transition:all .2s ease 0s}.page-container a:focus,.page-container a:hover,.page-footer a:focus,.page-footer a:hover{border-bottom:1px solid #0d476c;color:#0d476c}.page-container p{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}ul>ul{margin-bottom:0!important}.page-container pre{border:1px solid #e6e6e6;border-radius:2px;background-color:#f9f9fb;padding:12px;margin:0 0 1.5rem;line-height:16px}.page-container pre code{font-size:12px}.collapse{border:1px solid #e6e6e6;border-radius:2px;background-color:#f9f9fb;padding:12px;margin:0 0 1.5rem}.collapse div>a:first-child{background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTcuNzIgMTEuNTk2TDMuMTE5IDYuOTkyQS4zODIuMzgyIDAgMCAxIDMgNi43MTNjMC0uMTA4LjA0LS4yLjExOC0uMjc5bDEuMDMtMS4wM2EuMzgyLjM4MiAwIDAgMSAuMjc4LS4xMTdjLjEwOCAwIC4yMDEuMDQuMjguMTE3TDggOC43bDMuMjk0LTMuMjk1YS4zODIuMzgyIDAgMCAxIC4yOC0uMTE3Yy4xMDggMCAuMi4wNC4yNzkuMTE3bDEuMDMgMS4wM2EuMzgyLjM4MiAwIDAgMSAuMTE3LjI4YzAgLjEwNy0uMDQuMi0uMTE4LjI3OEw4LjI4IDExLjU5NmEuMzgyLjM4MiAwIDAgMS0uMjc5LjExNy4zODIuMzgyIDAgMCAxLS4yOC0uMTE3eiIgZmlsbD0iIzIzNmE5NyIvPjwvc3ZnPg==) no-repeat 0 50%;padding-left:20px;color:#4c9bd6;display:block;cursor:pointer;margin-bottom:.5rem;font-size:16px;text-decoration:none;border-bottom:none;-webkit-transition:all .2s ease 0s;transition:all .2s ease 0s}.collapse div>a:first-child:hover{color:#195f8d}.collapse.close div>a:first-child{background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTExLjU5NiA4LjI4bC00LjYwNCA0LjYwMmEuMzgyLjM4MiAwIDAgMS0uMjc5LjExOC4zODIuMzgyIDAgMCAxLS4yNzktLjExOGwtMS4wMy0xLjAzYS4zODIuMzgyIDAgMCAxLS4xMTctLjI3OGMwLS4xMDguMDQtLjIwMS4xMTctLjI4TDguNyA4IDUuNDA0IDQuNzA2YS4zODIuMzgyIDAgMCAxLS4xMTctLjI4YzAtLjEwOC4wNC0uMi4xMTctLjI3OWwxLjAzLTEuMDNBLjM4Mi4zODIgMCAwIDEgNi43MTQgM2MuMTA3IDAgLjIuMDQuMjc4LjExOGw0LjYwNCA0LjYwM2EuMzgyLjM4MiAwIDAgMSAuMTE3LjI3OWMwIC4xMDgtLjA0LjIwMS0uMTE3LjI4eiIgZmlsbD0iIzIzNmE5NyIvPjwvc3ZnPg==) no-repeat 0 50%}.collapse.close div>*{display:none}.collapse.close div>a:first-child{margin:0}.collapse div :last-child{margin-bottom:0}.collapse div .alert{margin:0 .5em 1.5rem}img[src$="/images/check.svg"],img[src$="/images/cross.svg"],img[src$="/images/exclamation.svg"],img[src$="/images/info.svg"]{margin-bottom:0;top:0!important}.plugin-meta-data{margin:16px 0;padding:16px 16px 8px;background:#f9f9fb;border:1px solid #e6e6e6;border-radius:3px}.plugin-meta-data a svg{margin-right:8px}.plugin-meta-data-header{border-bottom:1px solid #cfd3d7;padding-bottom:16px}.plugin-meta-data-header,.plugin-meta-data-version-links,.plugin-meta-data-version-release-info{display:flex}.plugin-meta-data-header>*+*,.plugin-meta-data-version-release-info>*+*,.plugin-meta-data-version-release-links>*+*{margin-left:16px}.plugin-meta-data-header>*+*{padding-left:16px;border-left:1px solid #cfd3d7}.plugin-meta-data-versions{margin-top:16px}.plugin-meta-data-versions-show-more{font-size:14px;float:right;color:#51575a;border-color:#7b8184;border-width:0 0 1px;padding-left:0;padding-right:0;background:transparent;cursor:pointer}.plugin-meta-data-versions-show-more:hover{color:#2d3032;border-color:#2d3032}.plugin-meta-data-version{margin-bottom:16px}.plugin-meta-data-version+.plugin-meta-data-version{padding-top:8px;border-top:1px dashed #cfd3d7}.plugin-meta-data-version-version{font-weight:700;font-size:18px}.plugin-meta-data-version-release-info{margin-top:8px;font-style:italic}.plugin-meta-data-version-release-description,.plugin-meta-data-version-release-links{margin-top:8px}</style><meta name="generator" content="Gatsby 2.2.8"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/component---src-templates-page-tsx-e1f2f2338cd4392feae4.js"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/5-48610aee5c94767ee2f4.js"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/app-e743b4178f3070744d20.js"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/styles-9b5ac6bbef0df6896858.js"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/webpack-runtime-6e91c8c88db5dadb76ef.js"/><link as="fetch" rel="preload" href="/SonarQubeChineseDoc8.1/static/d/105/path---extend-developing-plugin-377-f29-rqN36zzmIWVJ4NL3VQVJWKg3nQ.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="main-container"><div class="blue-bar"></div><div class="layout-page"><div class="page-sidebar-inner"><div class="page-sidebar"><div class="sidebar-header"><a href="/SonarQubeChineseDoc8.1/"><img alt="Continuous Code Quality" class="sidebar-logo" src="/SonarQubeChineseDoc8.1/images/SonarQubeIcon.svg" title="Continuous Code Quality" width="160"/></a><div class="version-select"><button type="button">Docs <span class="current">8.1</span></button></div></div><div class="page-indexes"><div class="search-container"><input type="search" aria-label="Search" class="search-input" placeholder="Search..." value=""/></div><nav><div><a class="page-indexes-link" href="/SonarQubeChineseDoc8.1/architecture/architecture-integration/">架構與整合</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Requirements</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Setup and Upgrade</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Analyzing Source Code</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>User Guide</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Project Administration</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Instance Administration</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Extension Guide</a></div><div><a class="page-indexes-link" href="/SonarQubeChineseDoc8.1/faq/">Frequently Asked Questions</a></div></nav></div><div class="sidebar-footer"><a href="https://www.sonarqube.org/" rel="noopener noreferrer" target="_blank"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 48 48" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M45.68 22.86a1.31 1.31 0 0 0-1.32 1.32v12a5.91 5.91 0 0 1-5.9 5.91H9.54a5.91 5.91 0 0 1-5.9-5.91V24A1.32 1.32 0 0 0 1 24v12.16a8.56 8.56 0 0 0 8.54 8.55h28.92A8.56 8.56 0 0 0 47 36.16v-12a1.32 1.32 0 0 0-1.32-1.3z" style="fill:currentColor"></path><path d="M23.07 34.24a1.36 1.36 0 0 0 .93.39 1.32 1.32 0 0 0 .93-.39l8.37-8.38A1.32 1.32 0 0 0 31.44 24l-6.12 6.13V3.39a1.32 1.32 0 0 0-2.64 0v26.74L16.55 24a1.32 1.32 0 0 0-1.86 1.86z" style="fill:currentColor"></path></svg> SonarQube</a><a href="https://community.sonarsource.com/" rel="noopener noreferrer" target="_blank"><img alt="Community" src="/SonarQubeChineseDoc8.1/images/community.svg"/> Community</a><a class="icon-only" href="https://twitter.com/SonarQube" rel="noopener noreferrer" target="_blank"><img alt="Twitter" src="/SonarQubeChineseDoc8.1/images/twitter.svg"/></a><a class="icon-only" href="https://www.sonarqube.org/whats-new/" rel="noopener noreferrer" target="_blank"><img alt="Product News" src="/SonarQubeChineseDoc8.1/images/newspaper.svg"/><span class="tooltip">Product News</span></a></div></div></div><div class="page-main"><div class="page-container"><div class="markdown-container"><h1>Plugin basics</h1><div class="markdown-content"><h2 id="header-1">Building your plugin</h2>
+<h3>Prerequisites</h3>
+<p>To build a plugin, you need Java 8 and Maven 3.1 (or greater). Gradle can also be used thanks to <a href="https://github.com/iwarapter/gradle-sonar-packaging-plugin" target="_blank">https://github.com/iwarapter/gradle-sonar-packaging-plugin</a>. Note that this Gradle plugin is not officially supported by SonarSource.</p>
+<h3>Create a Maven Project</h3>
+<p>The recommended way to start is by duplicating the plugin example project: <a href="https://github.com/SonarSource/sonar-custom-plugin-example" target="_blank">https://github.com/SonarSource/sonar-custom-plugin-example</a>.</p>
+<p>If you want to start the project from scratch, use the following Maven pom.xml template:</p>
+<div class="custom-block collapse"><div class="custom-block-body"><h2>pom.xml</h2><pre><code>&#x3C;?xml version="1.0" encoding="UTF-8"?>
+&#x3C;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  &#x3C;modelVersion>4.0.0&#x3C;/modelVersion>
+  &#x3C;groupId>YOUR_GROUP_ID&#x3C;/groupId>
+  &#x3C;!-- it's recommended to follow the pattern "sonar-{key}-plugin", for example "sonar-myphp-plugin" -->
+  &#x3C;artifactId>YOUR_ARTIFACT_ID&#x3C;/artifactId>
+  &#x3C;version>YOUR_VERSION&#x3C;/version>
+  
+  &#x3C;!-- this is important for sonar-packaging-maven-plugin -->
+  &#x3C;packaging>sonar-plugin&#x3C;/packaging>
+ 
+  &#x3C;dependencies>
+    &#x3C;dependency>
+      &#x3C;groupId>org.sonarsource.sonarqube&#x3C;/groupId>
+      &#x3C;artifactId>sonar-plugin-api&#x3C;/artifactId>
+      &#x3C;!-- minimal version of SonarQube to support. -->
+      &#x3C;version>6.7&#x3C;/version>
+      &#x3C;!-- mandatory scope -->
+      &#x3C;scope>provided&#x3C;/scope>
+    &#x3C;/dependency>
+  &#x3C;/dependencies>
+ 
+  &#x3C;build>
+    &#x3C;plugins>
+      &#x3C;plugin>
+        &#x3C;groupId>org.sonarsource.sonar-packaging-maven-plugin&#x3C;/groupId>
+        &#x3C;artifactId>sonar-packaging-maven-plugin&#x3C;/artifactId>
+        &#x3C;version>1.18.0.372&#x3C;/version>
+        &#x3C;extensions>true&#x3C;/extensions>
+        &#x3C;configuration>
+          &#x3C;!-- the entry-point class that extends org.sonar.api.SonarPlugin -->
+          &#x3C;pluginClass>com.mycompany.sonar.reference.ExamplePlugin&#x3C;/pluginClass>
+           
+          &#x3C;!-- advanced properties can be set here. See paragraph "Advanced Build Properties". -->
+        &#x3C;/configuration>
+      &#x3C;/plugin>
+    &#x3C;/plugins>
+  &#x3C;/build>
+&#x3C;/project>
+</code></pre></div></div>
+<h3>Build</h3>
+<p>To build your plugin project, execute this command from the project root directory:<br>
+<code>mvn clean package</code><br>
+The plugin jar file is generated in the project's <code>target/</code> directory.</p>
+<h3>Deploy</h3>
+<p><strong>"Cold" Deploy</strong><br>
+The standard way to install the plugin for regular users is to copy the JAR artifact, from the <code>target/</code> directory  to the <code>extensions/plugins/</code> directory of your SonarQube installation then start the server. The file <code>logs/web.log</code> will then contain a log line similar to:<br>
+<code>Deploy plugin Example Plugin / 0.1-SNAPSHOT</code><br>
+Scanner extensions such as sensors are immediately retrieved and loaded when scanning source code. </p>
+<h3>Debug</h3>
+<p><strong>Debugging web server extensions</strong>  </p>
+<ol>
+<li>Edit conf/sonar.properties and set: <code>sonar.web.javaAdditionalOpts=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8000</code></li>
+<li>Install your plugin by copying its JAR file to extensions/plugins</li>
+<li>Start the server. The line <code>Listening for transport dt_socket at address: 5005</code> is logged in  <code>logs/sonar.log</code>.</li>
+<li>Attach your IDE to the debug process (listening on port 8000 in the example)</li>
+</ol>
+<p><strong>Debugging compute engine extensions</strong><br>
+Same procedure as for web server extensions (see previous paragraph), but with the property: <code>sonar.ce.javaAdditionalOpts=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8000</code></p>
+<p><strong>Debugging scanner extensions</strong>  </p>
+<pre><code>export SONAR_SCANNER_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8000"
+cd /path/to/project
+sonar-scanner 
+</code></pre>
+<p>When using the Scanner for Maven, then simply execute:</p>
+<pre><code>cd /path/to/project
+mvnDebug sonar:sonar
+# debug port is 8000
+</code></pre>
+<h3>Advanced Build Properties</h3>
+<p>Plugin properties are defined in the file <code>META-INF/MANIFEST.MF</code> of the plugin .jar file.</p>
+<p>Most of them are defined through the <code>&#x3C;configuration></code> section of the <a href="https://jira.sonarsource.com/browse/PACKMP" target="_blank">sonar-packaging-maven-plugin</a>. Some are taken from standard pom nodes Effective values are listed at the end of the build log:</p>
+<pre><code>[INFO] --- sonar-packaging-maven-plugin:1.15:sonar-plugin (default-sonar-plugin) @ sonar-widget-lab-plugin ---
+[INFO] -------------------------------------------------------
+[INFO] Plugin definition in Marketplace
+[INFO]     Key: widgetlab
+[INFO]     Name: Widget Lab
+[INFO]     Description: Additional widgets
+[INFO]     Version: 1.9-SNAPSHOT
+[INFO]     Entry-point Class: org.codehaus.sonar.plugins.widgetlab.WidgetLabPlugin
+[INFO]     Required Plugins:
+[INFO]     Use Child-first ClassLoader: false
+[INFO]     Base Plugin:
+[INFO]     Homepage URL: https://redirect.sonarsource.com/plugins/widgetlab.html
+[INFO]     Minimal SonarQube Version: 4.5.1
+[INFO]     Licensing: GNU LGPL 3
+[INFO]     Organization: Shaw Industries
+[INFO]     Organization URL: http://shawfloors.com
+[INFO]     Terms and Conditions:
+[INFO]     Issue Tracker URL: http://jira.codehaus.org/browse/SONARWIDLB
+[INFO]     Build date: 2015-12-15T18:28:54+0100
+[INFO]     Sources URL: https://github.com/SonarCommunity/sonar-widget-lab
+[INFO]     Developers: G. Ann Campbell,Patroklos Papapetrou
+[INFO] -------------------------------------------------------
+[INFO] Building jar: /dev/sonar-widget-lab/target/sonar-widget-lab-plugin-1.9-SNAPSHOT.jar 
+</code></pre>
+<p>Supported standard pom node properties:</p>
+<table>
+<thead>
+<tr>
+<th>Maven Property</th>
+<th>Manifest Key</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>Plugin-Version</td>
+<td>(required) Plugin version as displayed in page "Marketplace". Default: ${project.version}</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Sonar-Version</td>
+<td>(required) Minimal version of supported SonarQube at runtime. For example if value is 5.2, then deploying the plugin on versions 5.1 and lower will fail. Default value is given by the version of sonar-plugin-api dependency. It can be overridden with the Maven property sonarQubeMinVersion (since sonar-packaging-maven-plugin 1.16). That allows in some cases to use new features of recent API and to still be compatible at runtime with older versions of SonarQube. Default: version of dependency sonar-plugin-api</td>
+</tr>
+<tr>
+<td><code>license</code></td>
+<td>Plugin-License</td>
+<td>Plugin license as displayed in page "Marketplace". Default <code>${project.licenses}</code></td>
+</tr>
+<tr>
+<td><code>developers</code></td>
+<td>Plugin-Developers</td>
+<td>List of developers displayed in page "Marketplace". Default: <code>${project.developers}</code></td>
+</tr>
+</tbody>
+</table>
+<p>Supported <code>&#x3C;configuration></code> properties:</p>
+<table>
+<thead>
+<tr>
+<th>Maven Property</th>
+<th>Manifest Key</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pluginKey</code></td>
+<td>Plugin-Key</td>
+<td>(required) Contains only letters/digits and is unique among all plugins. Examples: groovy, widgetlab. Constructed from <code>${project.artifactId}.</code> Given an artifactId of: <code>sonar-widget-lab-plugin</code>, your pluginKey will be: <code>widgetlab</code></td>
+</tr>
+<tr>
+<td><code>pluginClass</code></td>
+<td>Plugin-Class</td>
+<td>(required) Name of the entry-point class that extends <code>org.sonar.api.SonarPlugin</code>. Example: <code>org.codehaus.sonar.plugins.widgetlab.WidgetLabPlugin</code></td>
+</tr>
+<tr>
+<td><code>pluginName</code></td>
+<td>Plugin-Name</td>
+<td>(required) Displayed in the page "Marketplace". Default: <code>${project.name}</code></td>
+</tr>
+<tr>
+<td><code>pluginDescription</code></td>
+<td>Plugin-Description</td>
+<td>Displayed in the page "Marketplace". Default: <code>${project.description}</code></td>
+</tr>
+<tr>
+<td><code>pluginUrl</code></td>
+<td>Plugin-Homepage</td>
+<td>Homepage of website, for example <a href="https://github.com/SonarQubeCommunity/sonar-widget-lab" target="_blank">https://github.com/SonarQubeCommunity/sonar-widget-lab</a> <code>${project.url}</code></td>
+</tr>
+<tr>
+<td><code>pluginIssueTrackerUrl</code></td>
+<td>Plugin-IssueTrackerUrl</td>
+<td>Example: <a href="https://github.com/SonarQubeCommunity/sonar-widget-lab/issues" target="_blank">https://github.com/SonarQubeCommunity/sonar-widget-lab/issues</a>. Default: <code>${project.issueManagement.url}</code></td>
+</tr>
+<tr>
+<td><code>pluginTermsConditionsUrl</code></td>
+<td>Plugin-TermsConditionsUrl</td>
+<td>Users must read this document when installing the plugin from Marketplace. Default: <code>${sonar.pluginTermsConditionsUrl}</code></td>
+</tr>
+<tr>
+<td><code>useChildFirstClassLoader</code></td>
+<td>Plugin-ChildFirstClassLoader</td>
+<td>Each plugin is executed in an isolated classloader, which inherits a shared classloader that contains API and some other classes. By default the loading strategy of classes is parent-first (look up in shared classloader then in plugin classloader). If the property is true, then the strategy is child-first. This property is mainly used when building plugin against API &#x3C; 5.2, as the shared classloader contained many 3rd party libraries (guava 10, commons-lang, ...) false</td>
+</tr>
+<tr>
+<td><code>basePlugin</code></td>
+<td>Plugin-Base</td>
+<td>If specified, then the plugin is executed in the same classloader as basePlugin.</td>
+</tr>
+<tr>
+<td><code>pluginSourcesUrl</code></td>
+<td>Plugin-SourcesUrl</td>
+<td>URL of SCM repository for open-source plugins. Displayed in page "Marketplace". Default: <code>${project.scm.url}</code></td>
+</tr>
+<tr>
+<td><code>pluginOrganizationName</code></td>
+<td>Plugin-Organization</td>
+<td>Organization which develops the plugin, displayed in the page "Marketplace". Default: <code>${project.organization.name}</code></td>
+</tr>
+<tr>
+<td><code>pluginOrganizationUrl</code></td>
+<td>Plugin-OrganizationUrl</td>
+<td>URL of the organization, displayed in the page "Marketplace". Default: <code>${project.organization.url}</code></td>
+</tr>
+<tr>
+<td><code>sonarLintSupported</code></td>
+<td>SonarLint-Supported</td>
+<td>Whether the (language) plugin supports SonarLint or not. Only SonarSource analyzers (SonarJava, SonarJS, ...) and custom rules plugins for SonarSource analyzers should set this to true.</td>
+</tr>
+<tr>
+<td><code>pluginDisplayVersion</code></td>
+<td>Plugin-Display-Version</td>
+<td>The version as displayed in SonarQube administration console. By default it's the raw version, for example "1.2", but can be overridden to "1.2 (build 12345)" for instance. Supported in sonar-packaging-maven-plugin 1.18.0.372. Default: <code>${project.version}</code></td>
+</tr>
+</tbody>
+</table>
+<p>The Maven sonar-packaging-maven-plugin supports also these properties:</p>
+<table>
+<thead>
+<tr>
+<th>Maven Property</th>
+<th>Manifest Key</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addMavenDescriptor</code></td>
+<td>Copy pom file inside the directory META-INF of generated JAR file?</td>
+<td>Boolean. Default: <code>${sonar.addMavenDescriptor}</code> / <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>skipDependenciesPackaging</code></td>
+<td>Do not copy Maven dependencies into JAR file.</td>
+<td>Default: <code>${sonar.skipDependenciesPackaging} /</code>false`.</td>
+</tr>
+</tbody>
+</table>
+<p>Other Manifest fields:  </p>
+<ul>
+<li><code>Implementation-Build</code> - Identifier of build or commit, for example the Git sha1 "94638028f0099de59f769cdca776e506684235d6". It is displayed for debugging purpose in logs when SonarQube server starts.</li>
+</ul>
+<h2 id="header-2">API basics</h2>
+<h3>Extension points</h3>
+<p>SonarQube provides extension points for its three technical stacks:</p>
+<ul>
+<li>Scanner, which runs the source code analysis</li>
+<li>
+<p>Compute Engine, which consolidates the output of scanners, for example by </p>
+<ul>
+<li>computing 2nd-level measures such as ratings</li>
+<li>aggregating measures (for example number of lines of code of project = sum of lines of code of all files)</li>
+<li>assigning new issues to developers</li>
+<li>persisting everything in data stores</li>
+</ul>
+</li>
+<li>Web application</li>
+</ul>
+<p>Extension points are not designed to add new features but to complete existing features. Technically they are contracts defined by a Java interface or an abstract class annotated with @ExtensionPoint. The exhaustive list of extension points is available in the javadoc.</p>
+<p>The implementations of extension points (named "extensions") provided by a plugin must be declared in its entry point class, which implements org.sonar.api.Plugin and which is referenced in pom.xml:</p>
+<p>ExamplePlugin.java</p>
+<pre><code>package org.sonarqube.plugins.example;
+import org.sonar.api.Plugin;
+ 
+public class ExamplePlugin implements Plugin {
+  @Override
+  public void define(Context context) {
+    // implementations of extension points
+    context.addExtensions(FooLanguage.class, ExampleProperties.class);
+  }
+}
+</code></pre>
+<p>pom.xml</p>
+<pre><code>&#x3C;?xml version="1.0" encoding="UTF-8"?>
+&#x3C;project>
+  ...
+  &#x3C;build>
+    &#x3C;plugins>
+      &#x3C;plugin>
+        &#x3C;groupId>org.sonarsource.sonar-packaging-maven-plugin&#x3C;/groupId>
+        &#x3C;artifactId>sonar-packaging-maven-plugin&#x3C;/artifactId>
+        &#x3C;extensions>true&#x3C;/extensions>
+        &#x3C;configuration>
+          &#x3C;pluginClass>org.sonarqube.plugins.example.ExamplePlugin&#x3C;/pluginClass>
+        &#x3C;/configuration>
+      &#x3C;/plugin>
+    &#x3C;/plugins>
+  &#x3C;/build>
+&#x3C;/project>
+</code></pre>
+<h3>Lifecycle</h3>
+<p>A plugin extension exists only in its associated technical stacks. A scanner sensor is for example instantiated and executed only in a scanner runtime, but not in the web server nor in Compute Engine. The stack is defined by the annotations <a href="http://javadocs.sonarsource.org/latest/apidocs/org/sonar/api/batch/ScannerSide.html" target="_blank">@ScannerSide</a>, <a href="http://javadocs.sonarsource.org/latest/apidocs/index.html?org/sonar/api/server/ServerSide.html" target="_blank">@ServerSide</a> (for web server) and <a href="http://javadocs.sonarsource.org/latest/apidocs/index.html?org/sonar/api/ce/ComputeEngineSide.html" target="_blank">@ComputeEngineSide</a>. </p>
+<p>An extension can call core components or another extension of the same stack. These dependencies are defined by constructor injection:</p>
+<pre><code>@ScannerSide
+public class Foo {
+  public void call() {}
+}
+ 
+// Sensor is a scanner extension point 
+public class MySensor implements Sensor {
+  private final Foo foo;
+  private final Languages languages;
+  
+  // Languages is core component which lists all the supported programming languages.
+  public MySensor(Foo foo, Languages languages) {   
+    this.foo = foo;
+    this.languages = languages;
+  }
+  
+  @Override
+  public void execute(SensorContext context) {
+    System.out.println(this.languages.all());
+    foo.call();
+  }
+}
+ 
+  
+public class ExamplePlugin implements Plugin {
+  @Override
+  public void define(Context context) {
+    // Languages is a core component. It must not be declared by plugins.
+    context.addExtensions(Foo.class, MySensor.class);
+  }
+}
+</code></pre>
+<p>It is recommended not to call other components in constructors. Indeed, they may not be initialized at that time. Constructors should only be used for dependency injection.</p>
+<div class="custom-block alert alert-warning"><div class="custom-block-body"><p>Compilation does not fail if incorrect dependencies are defined, such as a scanner extension trying to call a web server extension. Still it will fail at runtime when plugin is loaded.</p></div></div>
+<h3>Third-party Libraries</h3>
+<p>Plugins are executed in their own isolated classloaders. That allows the packaging and use of 3rd-party libraries without runtime conflicts with core internal libraries or other plugins. Note that since version 5.2, the SonarQube API does not bring transitive dependencies, except SLF4J. The libraries just have to be declared in the pom.xml with default scope "compile":</p>
+<p>pom.xml</p>
+<pre><code>&#x3C;?xml version="1.0" encoding="UTF-8"?>
+&#x3C;project>
+  ...
+  &#x3C;dependencies>
+    ...
+    &#x3C;dependency>
+      &#x3C;groupId>commons-codec&#x3C;/groupId>
+      &#x3C;artifactId>commons-codec&#x3C;/artifactId>
+      &#x3C;version>1.10&#x3C;/version>
+    &#x3C;/dependency>
+ &#x3C;/dependencies>
+&#x3C;/project>
+</code></pre>
+<p>Technically the libraries are packaged in the directory META-INF/lib of the generated JAR file. An alternative is to shade libraries, for example with maven-shade-plugin. That minimizes the size of the plugin .jar file by copying only the effective used classes.</p>
+<div class="custom-block alert alert-info"><div class="custom-block-body"><p>The command <code>mvn dependency:tree</code> gives the list of all dependencies, including transitive ones.</p></div></div>
+<h3>Configuration</h3>
+<p>The core component <a href="http://javadocs.sonarsource.org/latest/apidocs/index.html?org/sonar/api/config/Configuration.html" target="_blank"><code>org.sonar.api.config.Configuration</code></a> provides access to configuration. It deals with default values and decryption of values. It is available in all stacks (scanner, web server, Compute Engine). As recommended earlier, it must not be called from constructors.</p>
+<p>MyExtension.java</p>
+<pre><code>public class MyRules implements RulesDefinition {
+  private final Configuration config;
+  
+  public MyRules(Configuration config) {   
+    this.config = config; 
+  }
+  
+  @Override
+  public void define(Context context) {
+    int value = config.getInt("sonar.property").orElse(0);
+  }
+}
+</code></pre>
+<p>Scanner sensors can get config directly from SensorContext, without using constructor injection:</p>
+<p>MySensor.java</p>
+<pre><code>public class MySensor extends Sensor {
+  @Override
+  public void execute(SensorContext context) {
+    int value = context.config().getInt("sonar.property").orElse(0);
+  }
+}
+</code></pre>
+<p>In the scanner stack, properties are checked in the following order, and the first non-blank value is the one that is used:</p>
+<ol>
+<li>System property</li>
+<li>Scanner command-line (-Dsonar.property=foo for instance)</li>
+<li>Scanner tool (<properties> of scanner for Maven for instance) </li>
+<li>Project configuration defined in the web UI </li>
+<li>Global configuration defined in the web UI </li>
+<li>Default value</li>
+</ol>
+<p>Plugins can define their own properties so that they can be configured from web administration console. The extension point org.sonar.api.config.PropertyDefinition must be used :</p>
+<pre><code>public class ExamplePlugin implements Plugin {
+  @Override
+  public void define(Context context) {
+    context.addExtension(
+      PropertyDefinition.builder("sonar.my.property")
+       .name("My Property")
+       .description("This is the description displayed in web admin console")
+       .defaultValue("42")
+       .build()
+    );
+  }
+}
+</code></pre>
+<div class="custom-block alert alert-info"><div class="custom-block-body"><p>Values of the properties suffixed with <code>.secured</code> are not available to non-authorized users (anonymous and users without project or global administration rights). <code>.secured</code> is needed for passwords, for instance.</p></div></div>
+<p>The annotation <a href="http://javadocs.sonarsource.org/latest/apidocs/index.html?org/sonar/api/Property.html" target="_blank"><code>@org.sonar.api.Property</code></a> can also be used on an extension to declare a property, but org.sonar.api.config.PropertyDefinition is preferred.</p>
+<pre><code>@Properties(
+    @Property(key="sonar.my.property", name="My Property", defaultValue="42")
+)
+public class MySensor implements Sensor {
+  // ...
+}
+  
+public class ExamplePlugin implements Plugin {
+  @Override
+  public void define(Context context) {
+    context.addExtension(MySensor.class);
+  }
+}
+</code></pre>
+<h3>Logging</h3>
+<p>The class <a href="http://javadocs.sonarsource.org/latest/apidocs/index.html?org/sonar/api/utils/log/Logger.html" target="_blank"><code>org.sonar.api.utils.log.Logger</code></a> is used to log messages to scanner output, web server logs/sonar.log, or Compute Engine logs (available from administration web console). It's convenient for unit testing (see class <a href="http://javadocs.sonarsource.org/latest/apidocs/index.html?org/sonar/api/utils/log/LogTester.html" target="_blank"><code>LogTester</code></a>).</p>
+<pre><code>import org.sonar.api.utils.log.*;
+public class MyClass {
+  private static final Logger LOGGER = Loggers.get(MyClass.class);
+ 
+  public void doSomething() {
+    LOGGER.info("foo");
+  }
+}
+</code></pre>
+<p>Internally <a href="http://www.slf4j.org/" target="_blank">SLF4J</a> is used as a facade of various logging frameworks (log4j, commons-log, logback, java.util.logging). That allows all these frameworks to work at runtime, such as when they are required for a 3rd party library. SLF4J loggers can also be used instead of org.sonar.api.utils.log.Logger. Read the <a href="http://www.slf4j.org/manual.html" target="_blank">SLF4J manual</a> for more details.</p>
+<p>As an exception, plugins must not package logging libraries. Dependencies like SLF4J or log4j must be declared with scope "provided".</p>
+<h3>Exposing APIs to Other Plugins</h3>
+<p>The common use case is to write a language plugin that will allow some other plugins to contribute additional rules (see for example how it is done in SonarJava). The main plugin will expose some APIs that will be implemented/used by the "rule" plugins.</p>
+<p>Plugins are loaded in isolated classloaders. It means a plugin can't access another plugin's classes. There is an exception for package names following pattern <code>org.sonar.plugins.&#x3C;pluginKey>.api</code>. For example all classes in a plugin with the key myplugin that are located in <code>org.sonar.plugins.myplugin.api</code> are visible to other plugins.</p>
+<h3>Serving Static Resources</h3>
+<p>If you need to serve static resources from your plugin such as images or JavaScript files, place them in a directory under <code>resources</code> named <code>static</code> (<code>myplugin/src/main/resources/static</code>). At runtime they'll be available from <code>http://{server}/static/{pluginKey}/{file}</code>. </p>
+<h2 id="header-3">Versioning and API Deprecation</h2>
+<h3>Versioning Strategy</h3>
+<p>The goal of this versioning strategy is both to:</p>
+<ul>
+<li>Release often, release early in order to get quick feedback from the SonarQube community</li>
+<li>Release stable versions of the SonarQube platform for companies whose main priority is to set up a very stable environment. Even if the price for such stable environments is missing out on the latest, sexy SonarQube features</li>
+<li>Support the API deprecation strategy (see next section)</li>
+</ul>
+<p>The rules are:</p>
+<ul>
+<li>Each ~two months a new version of SonarQube is released. This version should increment the minor digit of the previous version (ex: 4.2 -> 4.3)</li>
+<li>After three (or more) releases, a bug-fix version is released, and becomes the new LTS. The major digit of the subsequent version is incremented to start a new cycle (ex: 5.6 -> 6.0)</li>
+</ul>
+<p>And here is the strategy in action:</p>
+<pre><code>4.4 -> 4.5 -> 5.0 -> 5.1 -> 5.2 -> ... -> 5.5 -> 6.0 -> ...     &#x3C;- New release every ~2 months
+        |                                  |
+      4.5.1 -> 4.5.2 -> ...              5.5.1 -> 5.5.2 -> ...  &#x3C;- New LTS
+</code></pre>
+<h3>API Deprecation Strategy</h3>
+<p>The goal of this deprecation strategy is to make sure that deprecated APIs will be dropped without side-effects at a given planned date. The expected consequence of such strategy is to ease the evolution of the SonarQube API by making such refactoring painless.</p>
+<p>The rules are:</p>
+<ul>
+<li>An API must be deprecated before being dropped</li>
+<li>A deprecated API must be fully supported until its drop (For instance the implementation of a deprecated method can't be replaced by <code>throw new UnsupportedOperationException())</code></li>
+<li>If an API is deprecated in version X.Y, this API will be dropped in version (X+2).0. Example: an API deprecated in 4.1 is supported in 4.2, 4.3, 5.0, 5.1, 5.2, 5.3 and is dropped in version 6.0.</li>
+<li>According to the versioning strategy, that means that an API can remain deprecated before being dropped during 6 to 12 months.</li>
+<li>Any release of a SonarQube plugin must at least depend on the latest LTS version of the SonarQube API</li>
+<li>For each SonarQube plugin there must at least one release on each LTS version of SonarQube, which means at least one release each 6 months.</li>
+<li>No use of deprecated APIs is accepted when releasing a plugin. It raises a critical issue in SonarQube analysis. This issue can't be postponed.</li>
+<li>No deprecated API introduced 2 major versions ago is accepted when releasing SonarQube. It raises a critical issue in SonarQube analysis. This issue can't be postponed.</li>
+<li>
+<p>An API is marked as deprecated with both:</p>
+<ul>
+<li>the annotation @Deprecated</li>
+<li>
+<p>the javadoc tag @deprecated whose message must start with "in x.y", for example:</p>
+<pre><code>/**
+</code></pre>
+</li>
+<li>
+<p>@deprecated in 4.2. Replaced by {@link #newMethod()}.
+*/
+@Deprecated
+public void foo() {</p>
+<pre><code></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="header-4">API Changes</h2>
+<h3>Release 7.9</h3>
+<p>No changes</p>
+<h3>Release 7.8</h3>
+<p><img src="/images/check.svg"> Added</p>
+<ul>
+<li><code>org.sonar.api.web.WebAnalytics</code></li>
+</ul>
+<p><img src="/images/exclamation.svg"> Deprecated</p>
+<ul>
+<li><code>org.sonar.api.i18n.I18</code></li>
+<li><code>org.sonar.api.SonarQubeVersion</code> use <code>org.sonar.api.SonarRuntime</code> instead</li>
+<li><code>org.sonar.api.profiles.XMLProfileParser</code></li>
+<li><code>org.sonar.api.notifications.NotificationChannel</code></li>
+</ul>
+<p><img src="/images/cross.svg"> Removed</p>
+<ul>
+<li>Pico components relying on reflection to have their <code>start</code> or <code>stop</code> method called. Make your component implements <code>org.sonar.api.Startable</code> instead.</li>
+</ul>
+<h3>Release 7.7</h3>
+<p><img src="/images/check.svg"> Added</p>
+<ul>
+<li><code>org.sonar.api.batch.scm.ScmProvider#ignoreCommand</code></li>
+</ul>
+<p><img src="/images/exclamation.svg"> Deprecated</p>
+<ul>
+<li><code>org.sonar.api.batch.fs.InputFile::status</code></li>
+<li><code>org.sonar.api.resources.Qualifiers#BRC</code></li>
+</ul>
+<p><img src="/images/cross.svg"> Removed</p>
+<ul>
+<li>The preview/issues mode of scanner has been removed</li>
+</ul>
+<h3>Release 7.6</h3>
+<p><img src="/images/info.svg"> Changed</p>
+<ul>
+<li><code>PostJob</code> moved to project level IoC container</li>
+<li><code>InputFileFilter</code> moved to project level IoC container</li>
+</ul>
+<p><img src="/images/check.svg"> Added</p>
+<ul>
+<li>New annotation <code>org.sonar.api.scanner.ScannerSide</code> to mark (project level) scanner components</li>
+<li><code>org.sonar.api.batch.fs.InputProject</code> to create issues on project</li>
+<li><code>org.sonar.api.scanner.ProjectSensor</code> to declare Sensors that only run at project level</li>
+</ul>
+<p><img src="/images/exclamation.svg"> Deprecated</p>
+<ul>
+<li><code>org.sonar.scanner.issue.IssueFilter</code> deprecated</li>
+<li><code>org.sonar.api.batch.InstantiationStrategy</code> deprecated</li>
+<li><code>org.sonar.api.batch.ScannerSide</code> deprecated</li>
+<li><code>org.sonar.api.batch.fs.InputModule</code> deprecated</li>
+<li>Concept of global Sensor is deprecated (use <code>ProjectSensor</code> instead)</li>
+</ul>
+<p><img src="/images/cross.svg"> Removed</p>
+<ul>
+<li>Support of scanner tasks was removed</li>
+<li><code>RulesProfile</code> is no longer available for scanner side components (use <code>ActiveRules</code> instead)</li>
+</ul>
+<h3>Release 7.5</h3>
+<p>No changes</p>
+<h3>Release 7.4</h3>
+<p><img src="/images/info.svg"> Changed</p>
+<ul>
+<li>Allow identity provider to not provide login</li>
+</ul>
+<p><img src="/images/check.svg"> Added</p>
+<ul>
+<li>Allow sensors to report adhoc rules metadata</li>
+</ul>
+<p><img src="/images/cross.svg"> Removed</p>
+<ul>
+<li><code>org.sonar.api.rules.RuleFinder</code> removed from scanner side</li>
+<li><code>sonar-channel</code> removed from plugin classloader</li>
+<li>stop support of plugins compiled with API &#x3C; 5.2</li>
+</ul>
+<h3>Release 7.3</h3>
+<p><img src="/images/check.svg"> Added</p>
+<ul>
+<li><code>RulesDefinitions</code> supports HotSpots and security standards</li>
+</ul>
+<p><img src="/images/exclamation.svg"> Deprecated</p>
+<ul>
+<li><code>org.sonar.api.batch.AnalysisMode</code> and <code>org.sonar.api.issue.ProjectIssues</code> since preview mode is already deprecated for a while</li>
+</ul>
+<h3>Release 7.2</h3>
+<p><img src="/images/check.svg"> Added</p>
+<ul>
+<li><code>org.sonar.api.batch.sensor.SensorContext#newExternalIssue</code> to report external issues</li>
+<li><code>org.sonar.api.batch.sensor.SensorContext#newSignificantCode</code> to report part of the source file that should be used for issue tracking</li>
+<li><code>org.sonar.api.scan.issue.filter.FilterableIssue#textRange</code></li>
+</ul>
+<p><img src="/images/exclamation.svg"> Deprecated</p>
+<ul>
+<li>org.sonar.api.scan.issue.filter.FilterableIssue#line</li>
+</ul>
+<h3>Release 7.1</h3>
+<p><img src="/images/check.svg"> Added</p>
+<ul>
+<li><code>org.sonar.api.Plugin.Context#getBootConfiguration</code></li>
+<li><code>org.sonar.api.server.rule.RulesDefinition.NewRule#addDeprecatedRuleKey</code> to support deprecated rule keys</li>
+</ul>
+<h3>Release 7.0</h3>
+<p><img src="/images/check.svg"> Added</p>
+<ul>
+<li><code>org.sonar.api.batch.scm.ScmProvider#relativePathFromScmRoot</code>, <code>org.sonar.api.batch.scm.ScmProvider#branchChangedFiles</code> and <code>org.sonar.api.batch.scm.ScmProvider#revisionId</code> to improve branch and PR support</li>
+</ul>
+<h3>Release 6.7</h3>
+<p>No changes</p></div></div></div><div class="page-footer"><a href="https://creativecommons.org/licenses/by-nc/3.0/us/" rel="noopener noreferrer" target="_blank" title="Creative Commons License"><img alt="Creative Commons License" src="https://licensebuttons.net/l/by-nc/3.0/us/88x31.png"/></a>© 2008-2019, SonarSource S.A, Switzerland. Except where otherwise noted, content in this space is licensed under a<!-- --> <a href="https://creativecommons.org/licenses/by-nc/3.0/us/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-NonCommercial 3.0 United States License.</a> <!-- -->SONARQUBE is a trademark of SonarSource SA. All other trademarks and copyrights are the property of their respective owners.</div></div></div></div></div></div><script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,fetch,Object.assign,Symbol,Array.from"></script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-page-tsx","jsonName":"extend-developing-plugin-377","path":"/extend/developing-plugin/"};window.dataPath="105/path---extend-developing-plugin-377-f29-rqN36zzmIWVJ4NL3VQVJWKg3nQ";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-e743b4178f3070744d20.js"],"component---src-templates-page-tsx":["/component---src-templates-page-tsx-e1f2f2338cd4392feae4.js"],"pages-manifest":["/pages-manifest-1f5e96c7a321aeac4866.js"]};/*]]>*/</script><script src="/SonarQubeChineseDoc8.1/webpack-runtime-6e91c8c88db5dadb76ef.js" async=""></script><script src="/SonarQubeChineseDoc8.1/styles-9b5ac6bbef0df6896858.js" async=""></script><script src="/SonarQubeChineseDoc8.1/app-e743b4178f3070744d20.js" async=""></script><script src="/SonarQubeChineseDoc8.1/5-48610aee5c94767ee2f4.js" async=""></script><script src="/SonarQubeChineseDoc8.1/component---src-templates-page-tsx-e1f2f2338cd4392feae4.js" async=""></script></body></html>

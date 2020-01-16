@@ -1,0 +1,490 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:93.75%/1.45 'Roboto',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Roboto',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Roboto',serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#439ccd;}</style><link href="//fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css"/><title data-react-helmet="true">Adding Coding Rules | SonarQube 文件</title><link data-react-helmet="true" href="/SonarQubeChineseDoc8.1/favicon.ico" rel="icon"/><link data-react-helmet="true" href="/SonarQubeChineseDoclatest/extend/adding-coding-rules/" rel="canonical"/><script data-react-helmet="true" type="text/javascript">
+            (function(window,document) {
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window, document,'script','https://www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-1880045-11' , 'auto');
+              ga('send', 'pageview');
+            })(window,document);
+          </script><style data-href="/SonarQubeChineseDoc8.1/styles.f03d06e729ae60785766.css">#___gatsby,#___gatsby>div,.main-container,body,html{height:100%}iframe{width:100%;border:0}.blue-bar{background:#4c9bd6;height:5px;position:fixed;width:100%;z-index:100}.layout-page{align-items:stretch;display:flex;flex-grow:1;height:100%;width:100%}.page-sidebar{flex-grow:0;flex-shrink:0;padding:26px 26px 0;width:320px;display:flex;flex-direction:column}.page-sidebar,.page-sidebar-inner{background-color:#f9f9fb;height:100%}.page-sidebar-inner{overflow:auto;position:fixed}.sidebar-header{border-bottom:1px solid #cfd3d7;padding-bottom:10px;margin-right:-6px}.sidebar-logo{vertical-align:top;margin:0}.sidebar-footer{border-top:1px solid #cfd3d7;flex-grow:0;font-size:12px}.sidebar-footer a{position:relative;display:inline-block;text-decoration:none;color:rgba(0,0,0,.8);line-height:30px;margin:10px 10px 10px -8px;padding:0 8px;border-radius:3px}.sidebar-footer a img,.sidebar-footer a svg{height:16px;color:#8a8c8f;margin-right:5px;margin-bottom:0;-webkit-transform:translateY(2px);transform:translateY(2px)}.sidebar-footer a.icon-only img{height:12px;margin-right:0}.sidebar-footer a:hover{background:#e8eff5}.page-sidebar .alert{margin:16px 0}.page-sidebar a .tooltip{opacity:0;background:rgba(0,0,0,.8);color:#fff;font-size:12px;border-radius:3px;line-height:24px;padding:0 8px;position:absolute;top:-30px;left:-50px;white-space:nowrap;-webkit-transition:opacity .2s ease;transition:opacity .2s ease}.page-sidebar a .tooltip:after{top:100%;right:20px;content:" ";height:0;width:0;position:absolute;pointer-events:none;border:6px solid transparent;border-top-color:rgba(0,0,0,.8);margin-left:-6px}.page-sidebar a:hover .tooltip{opacity:1;display:block}.page-main{background:#fff;display:flex;flex-direction:column;flex-grow:1;margin-left:330px;min-height:100%;min-width:740px;padding:20px 20px 0;z-index:50}.search-container{position:relative}.search-container button{position:absolute;right:8px;top:50%;margin-top:-12px;height:16px;width:16px;background:transparent;border:none;cursor:pointer;outline:none;border-radius:3px;-webkit-transition:border-color .2s ease,box-shadow .2s ease;transition:border-color .2s ease,box-shadow .2s ease}.search-container button svg{position:absolute;top:4px;left:4px}.search-container button:focus,.search-container button:hover{background-color:#989898}.search-container button:focus svg,.search-container button:hover svg{color:#fff}.search-container button:focus{box-shadow:0 0 0 3px rgba(35,106,151,.25)}.search-input{border:1px solid #cfd3d7;border-radius:2px;width:calc(100% - 10px);margin-left:10px;margin-bottom:10px;padding:0 30px 0 10px;font-size:14px;line-height:30px;outline:none}.search-input:focus,.search-input:hover{border:1px solid #8a8c8f}a.search-result{color:#444;font-weight:400;text-decoration:none;display:block;padding:8px;margin-right:-10px}a.search-result.active,a.search-result.active mark{color:#2679af}a.search-result:hover{background:#e8eff5;border-radius:3px}a.search-result mark{color:#444;font-weight:700;background:0 0}a.search-result .note{margin:6px 0;font-size:12px}.page-indexes{padding:16px 20px 50px 16px;margin:10px -26px 0;flex-grow:1;overflow:auto}.page-indexes>div>a.search-result{margin:0 -4px 0 4px}.page-indexes-link{color:#2d3032;font-size:16px;font-weight:500;line-height:35px;padding:0 10px;margin:0 -10px 0 0;border-radius:3px;-webkit-transition:all .2s ease;transition:all .2s ease}.page-indexes-link:hover{background-color:#e8eff5;color:#2679af}.page-indexes-link.active{font-weight:700;color:#2679af}.page-indexes-link,.sub-menu-link{color:inherit;text-decoration:inherit;display:block}.sub-menu .page-indexes-link,.sub-menu .sub-menu{margin-left:-10px}.page-indexes-link svg{float:right;-webkit-transform:translateY(9px);transform:translateY(9px)}.sub-menu{padding:0 0 10px 22px}.sub-menu-link{font-size:14px;line-height:26px;margin:0}.sub-menu-link.active,.sub-menu-link:hover{color:#2679af}.sub-menu-link.active{font-weight:700}.page-container{max-width:900px;min-width:320px;padding-left:16px;padding-right:16px;font-size:15px;flex-grow:1;margin:0 auto}.page-container .headings-container{width:200px;float:right;margin-top:80px}.page-container .headings-container-fixed{position:fixed;width:inherit;padding-left:26px;border-left:1px solid #cfd3d7;z-index:100;background:#fff}.page-container .headings-container span{font-weight:700}.page-container .headings-container ul{margin:10px 0 0;padding:0}.page-container .headings-container li{list-style:none;margin:0 0 8px;line-height:16px}.page-container .headings-container a{color:rgba(0,0,0,.8);display:block;font-size:13px;color:#2d3032;text-decoration:inherit;border-bottom:none!important}.page-container .headings-container a.active,.page-container .headings-container a:hover{color:#2679af}.page-container .headings-container a.active{font-weight:700}.markdown-container{width:680px;margin:0 auto;padding-top:24px;padding-bottom:24px}.headings-container+.markdown-container{max-width:900px;width:auto;padding-right:220px}.markdown-content img[src$=".svg"]{position:relative;top:-2px;vertical-align:text-bottom}.page-container h1{font-size:26px;font-weight:700}.page-container h2{font-size:21px;font-weight:700}.page-container h3{font-size:18px;font-weight:700}.page-container h2,.page-container h3{margin-top:32px;margin-bottom:14px}.page-container p{margin-bottom:14px}.page-container ul{margin-bottom:14px;padding-left:16px}.page-container li{margin-bottom:6px}.page-container li p{margin-bottom:0}.page-container li ul{margin-top:8px}.page-container pre{white-space:pre-wrap;word-wrap:break-word}.page-footer{border-top:1px solid #ced2d6;font-size:13px;margin:10px 10px 0;padding:12px 0}.page-footer img{float:right;margin-left:10px}.version-select{position:relative;font-size:19px;margin-top:12px;max-width:calc(100% - 160px);text-align:right;float:right;border-radius:4px}.version-select>button{padding:2px 4px;background:transparent;border:0;cursor:pointer;outline:none}.version-select:hover{background:#e8eff5}.version-select ul{z-index:1000;position:absolute;display:block;top:100%;margin-top:4px;right:0;border:1px solid #cfd3d7;background:#fff;text-align:left;border-radius:4px}.version-select ul li{list-style:none;font-size:15px;margin:0;padding:4px 16px;text-align:left;-webkit-transition:all .2s ease;transition:all .2s ease;white-space:nowrap}.version-select ul li:hover{background:#f3f3f3}.version-select ul li span{color:#b58a13;font-weight:700}.version-select ul li span.current{color:#499cd2}.version-select ul li a{color:inherit;text-decoration:inherit}.version-select span{color:#b58a13;font-weight:700;padding-right:4px}.version-select span.current{color:#499cd2}.targetted-heading{border-left:4px solid #499cd2;margin-left:-10px;padding-left:6px}.alert{display:block;margin:0 -1em 1.5rem;border:1px solid #3e7fb7;background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTEwLjMzMyAxMi4zNzV2LTEuNDU4YS4yODguMjg4IDAgMCAwLS4yOTEtLjI5MmgtLjg3NVY1Ljk1OGEuMjg4LjI4OCAwIDAgMC0uMjkyLS4yOTFINS45NThhLjI4OC4yODggMCAwIDAtLjI5MS4yOTF2MS40NTljMCAuMTY0LjEyNy4yOTEuMjkxLjI5MWguODc1djIuOTE3aC0uODc1YS4yODguMjg4IDAgMCAwLS4yOTEuMjkydjEuNDU4YzAgLjE2NC4xMjcuMjkyLjI5MS4yOTJoNC4wODRhLjI4OC4yODggMCAwIDAgLjI5MS0uMjkyek05LjE2NyA0LjIwOFYyLjc1YS4yODguMjg4IDAgMCAwLS4yOTItLjI5MmgtMS43NWEuMjg4LjI4OCAwIDAgMC0uMjkyLjI5MnYxLjQ1OGMwIC4xNjQuMTI4LjI5Mi4yOTIuMjkyaDEuNzVhLjI4OC4yODggMCAwIDAgLjI5Mi0uMjkyek0xNSA4YzAgMy44NjUtMy4xMzUgNy03IDdzLTctMy4xMzUtNy03IDMuMTM1LTcgNy03IDcgMy4xMzUgNyA3eiIgZmlsbD0iIzRiOWZkNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+);background-color:#edf6fc;background-position:10px 15px;background-repeat:no-repeat;background-size:24px;padding:1em 1em 1em 40px;color:#000;border-radius:3px}.alert a{padding-bottom:1px;text-decoration:none;-webkit-transition:border-bottom-color .2s ease 0s;transition:border-bottom-color .2s ease 0s;border-bottom:1px solid rgba(62,127,183,.3);color:#3e7fb7;font-weight:700}.alert a:focus,.alert a:hover{border-bottom:1px solid #0d476c;color:#0d476c}.alert>p{margin:0}.alert-danger{border-color:#d75a4a;background-color:#fcedec;background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTExLjQ3MyAxMC4wNmEuNTguNTggMCAwIDAtLjE3NC0uNDFMOS42NSA4bDEuNjUtMS42NWEuNTguNTggMCAwIDAgMC0uODNsLS44Mi0uODJhLjU4LjU4IDAgMCAwLS44MyAwTDggNi4zNSA2LjM1IDQuN2EuNTguNTggMCAwIDAtLjgzIDBsLS44Mi44MmEuNTguNTggMCAwIDAgMCAuODNMNi4zNSA4IDQuNyA5LjY1YS41OC41OCAwIDAgMCAwIC44M2wuODIuODJjLjExLjEwOS4yNjUuMTczLjQyLjE3M2EuNTguNTggMCAwIDAgLjQxLS4xNzRMOCA5LjY1bDEuNjUgMS42NWEuNTguNTggMCAwIDAgLjgzIDBsLjgyLS44MmEuNjAxLjYwMSAwIDAgMCAuMTczLS40MnpNMTUgOGMwIDMuODY1LTMuMTM1IDctNyA3cy03LTMuMTM1LTctNyAzLjEzNS03IDctNyA3IDMuMTM1IDcgN3oiIGZpbGw9IiNkNDMzM2YiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==)}.alert-danger a{border-bottom:1px solid rgba(215,90,74,.3);color:#d75a4a}.alert-danger a:focus,.alert-danger a:hover{border-bottom:1px solid #a82f1f;color:#a82f1f}.alert-warning{border-color:#c99916;background-color:#ffefbc;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMy4zNiAyMC4wODgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojY2RhMjUxfTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJkYW5nZXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTM1Ljg1NykiPjxnIGlkPSJHcm91cGVfNTcyMiIgZGF0YS1uYW1lPSJHcm91cGUgNTcyMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzNS44NTcpIj48ZyBpZD0iR3JvdXBlXzU3MjEiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjEiPjxwYXRoIGlkPSJUcmFjw6lfOTU2NCIgZGF0YS1uYW1lPSJUcmFjw6kgOTU2NCIgY2xhc3M9ImNscy0xIiBkPSJNMjMuMDU5IDUyLjc2M2wtOS41ODItMTUuODkxYTIuMSAyLjEgMCAwIDAtMy41OTQgMEwuMyA1Mi43NjNhMi4xIDIuMSAwIDAgMCAxLjggMy4xODJoMTkuMTYyYTIuMSAyLjEgMCAwIDAgMS44LTMuMTgyem0tMS4yOTQgMS4zNjhhLjU3OS41NzkgMCAwIDEtLjUuMjk0SDIuMWEuNTc4LjU3OCAwIDAgMS0uNDk1LS44NzZsOS41ODItMTUuODkxYS41NzguNTc4IDAgMCAxIC45ODkgMGw5LjU4MiAxNS44OTFhLjU3OC41NzggMCAwIDEgLjAwNy41ODJ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0zNS44NTcpIi8+PC9nPjwvZz48ZyBpZD0iR3JvdXBlXzU3MjQiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLjY1NyA0Mi4xMTQpIj48ZyBpZD0iR3JvdXBlXzU3MjMiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjMiPjxwYXRoIGlkPSJUcmFjw6lfOTU2NSIgZGF0YS1uYW1lPSJUcmFjw6kgOTU2NSIgY2xhc3M9ImNscy0xIiBkPSJNMjM0LjYwOCAxNzMuMDA1Yy0uNTc5IDAtMS4wMy4zMS0xLjAzLjg2MSAwIDEuNjc5LjIgNC4wOTIuMiA1Ljc3MSAwIC40MzcuMzgxLjYyMS44MzMuNjIxLjMzOSAwIC44MTgtLjE4My44MTgtLjYyMSAwLTEuNjc5LjItNC4wOTIuMi01Ljc3MWEuOTA3LjkwNyAwIDAgMC0xLjAyMS0uODYxeiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIzMy41NzggLTE3My4wMDUpIi8+PC9nPjwvZz48ZyBpZD0iR3JvdXBlXzU3MjYiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLjYxNCA1MC4zNDEpIj48ZyBpZD0iR3JvdXBlXzU3MjUiIGRhdGEtbmFtZT0iR3JvdXBlIDU3MjUiPjxwYXRoIGlkPSJUcmFjw6lfOTU2NiIgZGF0YS1uYW1lPSJUcmFjw6kgOTU2NiIgY2xhc3M9ImNscy0xIiBkPSJNMjMzLjczOCAzNTMuMzA2YTEuMDg3IDEuMDg3IDAgMSAwIDAgMi4xNzMgMS4wODcgMS4wODcgMCAwIDAgMC0yLjE3M3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzIuNjUxIC0zNTMuMzA2KSIvPjwvZz48L2c+PC9nPjwvc3ZnPg==)}.alert-warning a{border-bottom:1px solid rgba(201,153,22,.3);color:#c99916}.alert-warning a:focus,.alert-warning a:hover{border-bottom:1px solid #9b7713;color:#9b7713}.alert-success{border-color:#3ec92c;background-color:#ecfcf2;background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTEyLjcwMyA2LjUyM2EuNTkzLjU5MyAwIDAgMC0uMTY0LS40MTlsLS44My0uODJhLjU4LjU4IDAgMCAwLS40MS0uMTczLjU4LjU4IDAgMCAwLS40MS4xNzNsLTMuNzE4IDMuNzEtMi4wNi0yLjA2YS41OC41OCAwIDAgMC0uNDEtLjE3NC41OC41OCAwIDAgMC0uNDEuMTc0bC0uODMuODJhLjU5My41OTMgMCAwIDAtLjE2NC40MmMwIC4xNTQuMDU1LjMuMTY0LjQxbDMuMyAzLjI5OWMuMTA5LjExLjI2NC4xNzMuNDEuMTczLjE1NSAwIC4zMS0uMDY0LjQxOS0uMTczbDQuOTUtNC45NWEuNTcxLjU3MSAwIDAgMCAuMTYzLS40MXpNMTUgOGMwIDMuODY1LTMuMTM1IDctNyA3cy03LTMuMTM1LTctNyAzLjEzNS03IDctNyA3IDMuMTM1IDcgN3oiIGZpbGw9IiMwYTAiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==)}.alert-success a{border-bottom:1px solid rgba(62,201,44,.3);color:#3ec92c}.alert-success a:focus,.alert-success a:hover{border-bottom:1px solid #138b04;color:#138b04}.alert svg{vertical-align:middle;-webkit-transform:translateY(-1px);transform:translateY(-1px)}.page-sidebar .alert{margin-top:16px;font-size:12px}.page-container a,.page-footer a{text-decoration:none;color:#347cab;border-bottom:1px solid rgba(52,124,171,.3);-webkit-transition:all .2s ease 0s;transition:all .2s ease 0s}.page-container a:focus,.page-container a:hover,.page-footer a:focus,.page-footer a:hover{border-bottom:1px solid #0d476c;color:#0d476c}.page-container p{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}ul>ul{margin-bottom:0!important}.page-container pre{border:1px solid #e6e6e6;border-radius:2px;background-color:#f9f9fb;padding:12px;margin:0 0 1.5rem;line-height:16px}.page-container pre code{font-size:12px}.collapse{border:1px solid #e6e6e6;border-radius:2px;background-color:#f9f9fb;padding:12px;margin:0 0 1.5rem}.collapse div>a:first-child{background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTcuNzIgMTEuNTk2TDMuMTE5IDYuOTkyQS4zODIuMzgyIDAgMCAxIDMgNi43MTNjMC0uMTA4LjA0LS4yLjExOC0uMjc5bDEuMDMtMS4wM2EuMzgyLjM4MiAwIDAgMSAuMjc4LS4xMTdjLjEwOCAwIC4yMDEuMDQuMjguMTE3TDggOC43bDMuMjk0LTMuMjk1YS4zODIuMzgyIDAgMCAxIC4yOC0uMTE3Yy4xMDggMCAuMi4wNC4yNzkuMTE3bDEuMDMgMS4wM2EuMzgyLjM4MiAwIDAgMSAuMTE3LjI4YzAgLjEwNy0uMDQuMi0uMTE4LjI3OEw4LjI4IDExLjU5NmEuMzgyLjM4MiAwIDAgMS0uMjc5LjExNy4zODIuMzgyIDAgMCAxLS4yOC0uMTE3eiIgZmlsbD0iIzIzNmE5NyIvPjwvc3ZnPg==) no-repeat 0 50%;padding-left:20px;color:#4c9bd6;display:block;cursor:pointer;margin-bottom:.5rem;font-size:16px;text-decoration:none;border-bottom:none;-webkit-transition:all .2s ease 0s;transition:all .2s ease 0s}.collapse div>a:first-child:hover{color:#195f8d}.collapse.close div>a:first-child{background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTExLjU5NiA4LjI4bC00LjYwNCA0LjYwMmEuMzgyLjM4MiAwIDAgMS0uMjc5LjExOC4zODIuMzgyIDAgMCAxLS4yNzktLjExOGwtMS4wMy0xLjAzYS4zODIuMzgyIDAgMCAxLS4xMTctLjI3OGMwLS4xMDguMDQtLjIwMS4xMTctLjI4TDguNyA4IDUuNDA0IDQuNzA2YS4zODIuMzgyIDAgMCAxLS4xMTctLjI4YzAtLjEwOC4wNC0uMi4xMTctLjI3OWwxLjAzLTEuMDNBLjM4Mi4zODIgMCAwIDEgNi43MTQgM2MuMTA3IDAgLjIuMDQuMjc4LjExOGw0LjYwNCA0LjYwM2EuMzgyLjM4MiAwIDAgMSAuMTE3LjI3OWMwIC4xMDgtLjA0LjIwMS0uMTE3LjI4eiIgZmlsbD0iIzIzNmE5NyIvPjwvc3ZnPg==) no-repeat 0 50%}.collapse.close div>*{display:none}.collapse.close div>a:first-child{margin:0}.collapse div :last-child{margin-bottom:0}.collapse div .alert{margin:0 .5em 1.5rem}img[src$="/images/check.svg"],img[src$="/images/cross.svg"],img[src$="/images/exclamation.svg"],img[src$="/images/info.svg"]{margin-bottom:0;top:0!important}.plugin-meta-data{margin:16px 0;padding:16px 16px 8px;background:#f9f9fb;border:1px solid #e6e6e6;border-radius:3px}.plugin-meta-data a svg{margin-right:8px}.plugin-meta-data-header{border-bottom:1px solid #cfd3d7;padding-bottom:16px}.plugin-meta-data-header,.plugin-meta-data-version-links,.plugin-meta-data-version-release-info{display:flex}.plugin-meta-data-header>*+*,.plugin-meta-data-version-release-info>*+*,.plugin-meta-data-version-release-links>*+*{margin-left:16px}.plugin-meta-data-header>*+*{padding-left:16px;border-left:1px solid #cfd3d7}.plugin-meta-data-versions{margin-top:16px}.plugin-meta-data-versions-show-more{font-size:14px;float:right;color:#51575a;border-color:#7b8184;border-width:0 0 1px;padding-left:0;padding-right:0;background:transparent;cursor:pointer}.plugin-meta-data-versions-show-more:hover{color:#2d3032;border-color:#2d3032}.plugin-meta-data-version{margin-bottom:16px}.plugin-meta-data-version+.plugin-meta-data-version{padding-top:8px;border-top:1px dashed #cfd3d7}.plugin-meta-data-version-version{font-weight:700;font-size:18px}.plugin-meta-data-version-release-info{margin-top:8px;font-style:italic}.plugin-meta-data-version-release-description,.plugin-meta-data-version-release-links{margin-top:8px}</style><meta name="generator" content="Gatsby 2.2.8"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/component---src-templates-page-tsx-e1f2f2338cd4392feae4.js"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/5-48610aee5c94767ee2f4.js"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/app-e743b4178f3070744d20.js"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/styles-9b5ac6bbef0df6896858.js"/><link as="script" rel="preload" href="/SonarQubeChineseDoc8.1/webpack-runtime-6e91c8c88db5dadb76ef.js"/><link as="fetch" rel="preload" href="/SonarQubeChineseDoc8.1/static/d/337/path---extend-adding-coding-rules-f-0-c-394-FjayT6TbJLb3JrFIK9SJatGMbE.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="main-container"><div class="blue-bar"></div><div class="layout-page"><div class="page-sidebar-inner"><div class="page-sidebar"><div class="sidebar-header"><a href="/SonarQubeChineseDoc8.1/"><img alt="Continuous Code Quality" class="sidebar-logo" src="/SonarQubeChineseDoc8.1/images/SonarQubeIcon.svg" title="Continuous Code Quality" width="160"/></a><div class="version-select"><button type="button">Docs <span class="current">8.1</span></button></div></div><div class="page-indexes"><div class="search-container"><input type="search" aria-label="Search" class="search-input" placeholder="Search..." value=""/></div><nav><div><a class="page-indexes-link" href="/SonarQubeChineseDoc8.1/architecture/architecture-integration/">架構與整合</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Requirements</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Setup and Upgrade</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Analyzing Source Code</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>User Guide</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Project Administration</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Instance Administration</a></div><div><a class="page-indexes-link" href="#"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 16 16" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M3.2,5.6c0-0.1,0-0.2,0.1-0.3c0.2-0.2,0.5-0.2,0.6,0l4.1,4.1l4.1-4.1c0.2-0.2,0.5-0.2,0.6,0 c0.2,0.2,0.2,0.5,0,0.6c0,0,0,0,0,0l0,0l-4.5,4.5c-0.2,0.2-0.5,0.2-0.6,0l0,0L3.3,5.9C3.2,5.9,3.2,5.7,3.2,5.6z" style="fill:currentColor"></path></svg>Extension Guide</a></div><div><a class="page-indexes-link" href="/SonarQubeChineseDoc8.1/faq/">Frequently Asked Questions</a></div></nav></div><div class="sidebar-footer"><a href="https://www.sonarqube.org/" rel="noopener noreferrer" target="_blank"><svg height="16" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421" version="1.1" viewBox="0 0 48 48" width="16" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M45.68 22.86a1.31 1.31 0 0 0-1.32 1.32v12a5.91 5.91 0 0 1-5.9 5.91H9.54a5.91 5.91 0 0 1-5.9-5.91V24A1.32 1.32 0 0 0 1 24v12.16a8.56 8.56 0 0 0 8.54 8.55h28.92A8.56 8.56 0 0 0 47 36.16v-12a1.32 1.32 0 0 0-1.32-1.3z" style="fill:currentColor"></path><path d="M23.07 34.24a1.36 1.36 0 0 0 .93.39 1.32 1.32 0 0 0 .93-.39l8.37-8.38A1.32 1.32 0 0 0 31.44 24l-6.12 6.13V3.39a1.32 1.32 0 0 0-2.64 0v26.74L16.55 24a1.32 1.32 0 0 0-1.86 1.86z" style="fill:currentColor"></path></svg> SonarQube</a><a href="https://community.sonarsource.com/" rel="noopener noreferrer" target="_blank"><img alt="Community" src="/SonarQubeChineseDoc8.1/images/community.svg"/> Community</a><a class="icon-only" href="https://twitter.com/SonarQube" rel="noopener noreferrer" target="_blank"><img alt="Twitter" src="/SonarQubeChineseDoc8.1/images/twitter.svg"/></a><a class="icon-only" href="https://www.sonarqube.org/whats-new/" rel="noopener noreferrer" target="_blank"><img alt="Product News" src="/SonarQubeChineseDoc8.1/images/newspaper.svg"/><span class="tooltip">Product News</span></a></div></div></div><div class="page-main"><div class="page-container"><div class="markdown-container"><h1>Adding Coding Rules</h1><div class="markdown-content"><p>There are two ways to extend coding rules:</p>
+<ul>
+<li>Writing coding rules using Java via a SonarQube plugin</li>
+<li>Adding XPath rules directly through the SonarQube web interface</li>
+</ul>
+<p>If both are available, the Java API will be more fully-featured than what's available for XPath, and is generally preferable.</p>
+<div class="custom-block alert alert-info"><div class="custom-block-body"><p>Before implementing a new coding rule, you should consider whether it is specific to your own context or might benefit others. If it might benefit others, you can propose it on the <a href="https://community.sonarsource.com/" target="_blank">Community Forum</a>. If there is shared interest, then it might be implemented for you directly in the related language plugin. It means less maintenance for you, and benefit to others.</p></div></div>
+<h2 id="header-1">Custom rule support by language</h2>
+<p>Languages not listed here don't support custom rules</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>XPath 1.0</th>
+<th>Java</th>
+<th>Other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C#</td>
+<td>-</td>
+<td>-</td>
+<td><img src="/images/check.svg"><a href="/SonarQubeChineseDoc8.1/analysis/external-issues/">Importing Issues from Third-Party Roslyn Analyzers (C#, VB.NET)</a></td>
+</tr>
+<tr>
+<td>COBOL</td>
+<td>-</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Flex</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>-</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>-</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>-</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+</tr>
+<tr>
+<td>PL/SQL</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>PL/I</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>-</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+</tr>
+<tr>
+<td>RPG</td>
+<td>-</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+</tr>
+<tr>
+<td>VB.NET</td>
+<td>-</td>
+<td>-</td>
+<td><img src="/images/check.svg"><a href="/SonarQubeChineseDoc8.1/analysis/external-issues/">Importing Issues from Third-Party Roslyn Analyzers (C#, VB.NET)</a></td>
+</tr>
+<tr>
+<td>XML</td>
+<td><img src="/images/check.svg"></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="header-2">Adding coding rules using Java</h2>
+<p>Writing coding rules in Java is a six-step process:</p>
+<ul>
+<li>Create a SonarQube plugin.</li>
+<li>Put a dependency on the API of the language plugin for which you are writing coding rules.</li>
+<li>Create as many custom rules as required.</li>
+<li>Generate the SonarQube plugin (jar file).</li>
+<li>Place this jar file in the SONARQUBE_HOME/extensions/plugins directory.</li>
+<li>Restart SonarQube server.</li>
+</ul>
+<p>See the following pages to see samples and details about how to create coding rules </p>
+<ul>
+<li><a href="/SonarQubeChineseDoc8.1/analysis/languages/cobol/">for COBOL</a></li>
+<li><a href="/SonarQubeChineseDoc8.1/analysis/languages/java/">for Java</a></li>
+<li><a href="/SonarQubeChineseDoc8.1/analysis/languages/javascript/">for JavaScript</a></li>
+<li><a href="/SonarQubeChineseDoc8.1/analysis/languages/php/">for PHP</a></li>
+<li><a href="/SonarQubeChineseDoc8.1/analysis/languages/python/">for Python</a></li>
+<li><a href="/SonarQubeChineseDoc8.1/analysis/languages/rpg/">for RPG</a></li>
+</ul>
+<h2 id="header-3">Adding coding rules using XPATH</h2>
+<p>SonarQube provides a quick and easy way to add new coding rules directly via the web interface for certain languages using XPath 1.0 expressions. For XML, which is already immediately accessible to XPath, you can simply write your rules and check them using any of the <a href="http://codebeautify.org/Xpath-Tester" target="_blank">freely available tools</a> for examining XPath on XML. If you're writing rules for XML, skip down to the Adding your rule to the server section once you've got your rules written.</p>
+<p>For other languages how to access a variable, for example, in XPath is less obvious, so we've provided tools.</p>
+<h3>Writing an XPath Rule using SSLR Toolkit</h3>
+<p>The rules must be written in XPath (version 1.0) to navigate the language's <a href="http://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank">Abstract Syntax Tree</a> (AST). For most languages, an SSLR Toolkit is provided to help you navigate the AST. You need to download the <code>sslr-{language}-toolkit-{version}.jar</code> file corresponding to the version of your language plugin you have on your SonarQube instance.</p>
+<p>Each language's SSLR Toolkit is a standalone application that displays the AST for a piece of code source that you feed into it, allowing you to read the node names and attributes from your code sample and write your XPath expression. Knowing the XPath language is the only prerequisite, and there are a lot of tutorials on XPath online.</p>
+<p>The latest version of SSLR Toolkit can be downloaded from following locations:</p>
+<ul>
+<li><a href="https://binaries.sonarsource.com/Distribution/sonar-flex-plugin/" target="_blank">Flex</a></li>
+<li><a href="https://binaries.sonarsource.com/CommercialDistribution/sslr-plsql-toolkit/" target="_blank">PL/SQL</a></li>
+<li><a href="https://binaries.sonarsource.com/CommercialDistribution/sslr-pli-toolkit/" target="_blank">PL/I</a></li>
+</ul>
+<p>For an SSLR preview, consider the following source code sample:</p>
+<pre><code>function HelloWorld(hour) {
+  if (hour) {
+    this.hour = hour;
+  } else {
+    var date = new Date();
+    this.hour = date.getHours();
+  }
+  this.displayGreeting = function() {
+    if (this.hour >= 22 || this.hour &#x3C;= 5)
+      document.write("Good night, World!");
+    else
+      document.write("Hello, World!");
+  } 
+}
+</code></pre>
+<p>While parsing source code, SonarQube builds an Abstract Syntax Tree (AST) for it, and the SSLR Toolkit provided for each language will show you SonarQube's AST for a given piece of code. Here's the AST for our sample:</p>
+<p><img src="/images/astSample.png" alt="AST example"></p>
+<p>The <a href="http://en.wikipedia.org/wiki/XPath" target="_blank">XPath</a> language provides a way to write coding rules by navigating this AST, and the SSLR Toolkit for the language will give you the ability to test your new rules against your sample code.</p>
+<h3>Adding your Rule to the Server</h3>
+<p>Once your new rule is written, you can add it SonarQube:</p>
+<ol>
+<li>Login as an Quality Profile Administrator</li>
+<li>Go to Rules page</li>
+<li>Select the Language for which you want to create the XPath rule</li>
+<li>Tick the Template criterion and select "Show Templates Only" </li>
+<li>Look for the XPath rule template</li>
+<li>Click on it to select it, then use the interface controls to create a new instance</li>
+<li>Fill in the form that pops up</li>
+<li>Once you've created your rule, you'll need to add it to a Quality Profile and run analysis to see it in action.</li>
+</ol>
+<h2 id="header-4">Coding rule guidelines</h2>
+<p>These are the guidelines that SonarSource uses internally to specify new rules. Rules in community plugins are not required to adhere to these guidelines. They are provided here only in case they are useful.</p>
+<p>Note that fields "title", "description" and "message" have a different format when the rule type is "Hotspot".</p>
+<h3>Guidelines for Bug, Vulnerability, and Code Smell rules</h3>
+<h4>Titles</h4>
+<ul>
+<li>The title of the rule should match the pattern "X should [ not ] Y" for most rules. Note that the "should [ not ]" pattern is too strong for Finding rules, which are about observations on the code. Finding titles should be neutral, such as "Track x".</li>
+<li>
+<p>All other things being equal, the positive form is preferred. E.G.</p>
+<ul>
+<li>"X should Y" is preferred to </li>
+<li>"X should not Z"</li>
+</ul>
+</li>
+<li>
+<p>Titles should be written in plural form if at all possible. E.G.</p>
+<ul>
+<li><img src="/images/check.svg">Flibbers should gibbet</li>
+<li><img src="/images/cross.svg">A Flibber should gibbet</li>
+</ul>
+</li>
+<li>Any piece of code in the rule title should be double-quoted (and not single-quoted).</li>
+<li>There should be no category/tag prefixed to the rule title, such as "Accessibility - Image tags should have an alternate text attribute"</li>
+<li>Titles should be as concise as possible. Somewhere around 70 or 80 characters is an ideal maximum, although this is not always achievable.</li>
+</ul>
+<p>Noncompliant Title Examples:</p>
+<ul>
+<li>File should not have too many lines of code  // Noncompliant; singular form used</li>
+<li>Avoid file with too many lines of code  // Noncompliant; doesn't follow "x should [not] y" pattern</li>
+<li>Too many lines of code  // Noncompliant</li>
+<li>Don't use "System.(out/err)"  // Noncompliant</li>
+<li>Parameters in an overriding virtual function should either use the same default arguments as the function they override, or not specify any default arguments  // Noncompliant; waaaay too long</li>
+</ul>
+<p>Compliant Solutions:</p>
+<ul>
+<li>Files should not have too many lines of code  </li>
+<li>"System.(out/err)" should not be used to log messages</li>
+<li>Overriding virtual functions should not change parameter defaults</li>
+</ul>
+<p>Starting with the subject, such as "Files", will ensure that all rules applying to files will be grouped together.</p>
+<h4>Descriptions</h4>
+<p>Rule descriptions should contain the following sections in the listed order:</p>
+<ul>
+<li><strong>Rationale</strong> (unlabeled) - explaining why this rule make sense.
+If it's not absolutely clear from the rationale what circumstances will cause an issue to be raised, then this section should end with "This rule raises an issue when [ insert circumstances here ]".</li>
+<li>
+<p><strong>Noncompliant Code Example</strong> - providing some examples of issues</p>
+<ul>
+<li>Ideally, the examples should depend upon the default values of any parameters the rule has, and these default values should be mentioned before the code block. This is for the benefit of users whose rule parameters are tuned to something other than the default values. E.G.
+With a parameter of: <code><em>:.</em>log4j.*</code></li>
+<li>The lines in these code samples where issues are expected should be marked with a "Noncompliant" comment</li>
+<li>"Compliant" comments may be used to help demonstrate the difference between what is and is not allowed by the rule</li>
+<li>It is acceptable to omit this section when demonstrating noncompliance would take too long, e.g. "Classes should not have too many lines of code"</li>
+</ul>
+</li>
+<li>
+<p><strong>Compliant Solution</strong> - demonstrating how to fix the previous issues. Good to have but not required for rules that detect bugs. </p>
+<ul>
+<li>There is no need to mark anything "Compliant" in the Compliant Solution; everything here is compliant by definition</li>
+<li>It is acceptable to omit this section when there are too many equally viable solutions.</li>
+</ul>
+</li>
+<li><strong>Exceptions</strong> (optional) - listing and explaining some specific use cases where no issues are logged even though some might be expected. Note that this is sometimes incorporated into the rationale, instead.</li>
+<li><strong>See</strong> (optional) - listing references and/or links to external standards like MISRA, SEI, CERT, &#x26;etc.
+Deprecated (optional): listing replacement rules with links</li>
+</ul>
+<p>Code samples for COBOL should be in upper case. </p>
+<p>When displayed in SonarQube, any code or keywords in the description should be enclosed in <code> tags. For descriptions written in JIRA, this means using double curly braces (<code>{{</code> and <code>}}</code>) to enclose such text. They will be translated in the final output.</p>
+<h4>Messages</h4>
+<p>Issue messages should contain the remediation message for bug and quality rules. For potential-bug rules, it should make it explicit that a manual review is required. It should be in the imperative mood ("Do x"), and therefore start with a verb.</p>
+<p>An issue message should always end with a period ('.') since it is an actual sentence, unless it ends with a regular expression, in which case the regular expression should be preceded by a colon and should end the message.</p>
+<p>Any piece of code in the the rule message should be double-quoted (and not single-quoted). Moreover, if an issue is triggered because a number was above a threshold value, then both the number and the threshold value should be mentioned in the issue message. </p>
+<p>Sample messages:</p>
+<ul>
+<li>Remove or refactor this useless "switch" statement. // Compliant</li>
+<li>This "switch" statement is useless and should be refactored or removed. // Noncompliant</li>
+<li>Every "switch" statement shall have at least one case-clause. // Noncompliant</li>
+<li>Rename this variable to comply with the regular expression: [a-z]+  // Compliant</li>
+</ul>
+<div class="custom-block collapse"><div class="custom-block-body"><h2>Sample Specification</h2><h3>Generic exceptions should not be thrown</h3><p>Using generic exceptions such as <code>Error</code>, <code>RuntimeException</code>, <code>Throwable</code>, and <code>Exception</code> prevents calling methods from handling true, system-generated exceptions differently than application-generated errors.</p><p><strong>Noncompliant Code Example</strong>  </p><pre><code>With the default regular expression [a-z][a-zA-Z0-9]+:
+
+try { /* ... */ } catch (Exception e) { LOGGER.info("context"); } // Noncompliant; exception is lost
+try { /* ... */ } catch (Exception e) { LOGGER.info(e); } // Noncompliant; context is required
+try { /* ... */ } catch (Exception e) { LOGGER.info(e.getMessage()); } // Noncompliant; exception is lost (only message is preserved)
+try {
+/* ... */
+} catch (Exception e) { // Noncompliant - exception is lost
+throw new RuntimeException("context");
+}
+</code></pre><p><strong>Compliant Solution</strong>  </p><pre><code>try { /* ... */ } catch (Exception e) { LOGGER.info("context", e); }
+try {
+/* ... */
+} catch (Exception e) {
+throw new RuntimeException("context", e);
+}
+</code></pre><p><strong>Exceptions</strong><br>
+Generic exceptions in the signatures of overriding methods are ignored.</p><pre><code>@Override
+public void myMethod() throws Exception {...}
+</code></pre><p><strong>See</strong>  </p><ul>
+<li>MISRA C:2004, 4.5.2</li>
+<li>MITRE, <a href="http://cwe.mitre.org/data/definitions/580.html" target="_blank">CWE-580</a> - clone() Method Without super.clone()</li>
+</ul><p><strong>See also</strong><br>
+S4567 - Rule title here</p></div></div>
+<h3>Guidelines for Hotspot rules</h3>
+<p>See <a href="https://jira.sonarsource.com/browse/RSPEC-4721" target="_blank">RSPEC-4721</a> for an example of Hotspot rule.</p>
+<h4>Titles</h4>
+<ul>
+<li>The title should start with a verb in the present participle form (-ing)</li>
+<li>The title should end with "is security-sensitive"</li>
+</ul>
+<p>Noncompliant Title Examples:</p>
+<ul>
+<li>Avoid executing OS commands</li>
+</ul>
+<p>Compliant Solution:</p>
+<ul>
+<li>Executing OS commands is security-sensitive</li>
+<li>Deserializing objects from an untrusted source is security-sensitive</li>
+</ul>
+<h4>Descriptions</h4>
+<p>Rule descriptions should contain the following sections in the listed order:</p>
+<ul>
+<li>
+<p><strong>Rationale</strong> (unlabeled) - explaining why this rule make sense.</p>
+<ul>
+<li>It starts with a copy of the title. The "is security sensitive" part can be replaced with "can lead to ...<DESCRIBE RISK>" when there is one risk and it is easy to describe in a short manner.</li>
+<li>Next is added the phrase "For example, it has led in the past to the following vulnerabilities:".</li>
+<li>Next is a list of CVE links formatted as bullet points. Each CVE should point to their description on the (Example: CVE-2018-12465).</li>
+</ul>
+</li>
+<li>
+<p><strong>Ask Yourself Whether</strong> - listing a set of questions which the developer should ask herself/himself.</p>
+<ul>
+<li>Those questions should check if the context in which the code is makes it dangerous.
+For example, if some code enables a user to insert custom data the database, one of the questions could be: Is the user input sanitized?</li>
+<li>Some additional questions can be added to remind the developer that there might not be a need for this code.
+For example, if some code enables a user to send and then execute custom code, the question could be: Does the user really need to execute code dynamically?</li>
+<li>This section ends with "You are at risk if you answered yes to any of those questions." with an asterisk marking the corresponding questions if it is not the case for all of them.</li>
+</ul>
+</li>
+<li>
+<p><strong>Recommended Secure Coding Practices</strong> - describing all the ways to mitigate the risk.</p>
+<ul>
+<li>It usually contains a mix of all the advices provided by OWASP rules.</li>
+<li>Add detailed solutions whenever possible.</li>
+</ul>
+</li>
+<li>
+<p>one of the following:</p>
+<ul>
+<li><strong>Noncompliant Code Example</strong> - same as for Bug, Vulnerability and Code Smell rules.
+some code can be added to give an example of dangerous context. For example: putting a password in an insecure cookie.</li>
+<li><strong>Sensitive Code Example</strong> - use this instead of "Noncompilant code example" when the Hotspot highlights some code which is not dangerous but might be the source of some vulnerability. Example: an opening Socket.</li>
+</ul>
+</li>
+<li><strong>See</strong> (optional) -  same as for Bug, Vulnerability and Code Smell rules.</li>
+<li><strong>Deprecated</strong> (optional) -  listing replacement rules with links.</li>
+</ul>
+<p>Guidelines regarding COBOL, keywords and code are the same as for other rules.</p>
+<h4>Messages</h4>
+<p>Most of the time you can paraphrase the title:</p>
+<ul>
+<li>start the sentence with "Make sure that"</li>
+<li>replace "is security-sensitive" with "is safe here"</li>
+</ul>
+<p>However for some rules it can make sense to change the title. See the examples below: </p>
+<ul>
+<li>
+<p>Title: Executing OS commands is security-sensitive</p>
+<ul>
+<li>Message: make sure that executing this OS command is safe here.</li>
+</ul>
+</li>
+<li>
+<p>Title: Delivering code in production with debug mode activated is security-sensitive</p>
+<ul>
+<li>Message: Make sure this debug mode is deactivated before delivering the code in production.</li>
+</ul>
+</li>
+</ul>
+<h3>Guidelines applicable to all rules</h3>
+<h4>See/References</h4>
+<p>When a reference is made to a standards specification, e.g. MISRA, the following steps must also be taken:</p>
+<ul>
+<li>add any related tags, such as: security, bug, &#x26;etc.</li>
+<li>add the relevant standard-related tag/label such as cwe, misra, etc. (If you forget, the overnight automation will remember for you.) </li>
+<li>update the appropriate field on the References tab with the cited id. (If you forget, the overnight automation will remember for you.) </li>
+</ul>
+<p>If needed, references to other rules should be listed under a "See also" heading. If a "See" heading exists in the rule, then the "See also" title should be at the h3 level. Otherwise, use an h2 for it.</p>
+<p>Other rules should be linked to only if they are related or contradictory (such as a pair of rules about where <code>{</code> should go).</p>
+<p>Why list references to other rules under "see also" instead of "see"? The see section is used to support the current rule, and one rule cannot be used as justification for another rule. </p>
+<h4>Rule Type</h4>
+<p>Now that you've fleshed out the description, you should have a fairly clear idea of what type of rule this is, but to be explicit:</p>
+<p><strong>Bug</strong> - Something that's wrong or potentially wrong. </p>
+<p><strong>Code Smell</strong> - Something that will confuse a maintainer or cause her to stumble in her reading of the code.</p>
+<p><strong>Vulnerability</strong> - Something that has a high chance of being exploited by an attacker.</p>
+<p><strong>HotSpot</strong> - Something that could result in a vulnerability depending on the context in which this code is present. </p>
+<p>Sometimes the line between Bug and Code Smell is fuzzy. When in doubt, ask yourself: "Is code that breaks this rule doing what the programmer probably intended?" If the answer is "probably not" then it's a Bug. Everything else is a Code Smell.</p>
+<h4>Default severities</h4>
+<p>When assessing the default severity of a rule, the first thing to do is ask yourself "what's the worst thing that could happen?" In answering, you should factor in Murphy's Law without predicting Armageddon.</p>
+<p>Once you have your answer, it's time to assess whether the Impact and Likelihood of the Worst Thing are High or Low. To do that, ask yourself these specific questions:</p>
+<p>Vulnerability</p>
+<ul>
+<li>Impact: Could the exploitation of the vulnerability result in significant damage to your assets or your users? (Yes = High)</li>
+<li>Likelihood: What is the probability a hacker will be able to exploit the issue?</li>
+</ul>
+<p>Bug</p>
+<ul>
+<li>Impact: Could the bug cause the application to crash or corrupt stored data?
+(Languages where an error can cause program termination: COBOL, Python, PL/SQL, RPG.) </li>
+<li>Likelihood: What is the probability the worst will happen?</li>
+</ul>
+<p>Code Smell</p>
+<ul>
+<li>Impact: Could the Code Smell lead a maintainer to introduce a bug?</li>
+<li>Likelihood: What is the probability the worst will happen?</li>
+</ul>
+<p>Once you have your Impact and Likelihood assessments, the rest is easy:</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>impact</th>
+<th>likelihood</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blocker</td>
+<td><img src="/images/check.svg"></td>
+<td><img src="/images/check.svg"></td>
+</tr>
+<tr>
+<td>Critical</td>
+<td><img src="/images/check.svg"></td>
+<td><img src="/images/cross.svg"></td>
+</tr>
+<tr>
+<td>Major</td>
+<td><img src="/images/cross.svg"></td>
+<td><img src="/images/check.svg"></td>
+</tr>
+<tr>
+<td>Minor</td>
+<td><img src="/images/cross.svg"></td>
+<td><img src="/images/cross.svg"></td>
+</tr>
+</tbody>
+</table>
+<h4>Tags</h4>
+<p>Rules can have 0-n tags, although most rules should have at least one. Many of the common-across-languages tags are described in <a href="/SonarQubeChineseDoc8.1/user-guide/issues/">the issues docs</a>.</p>
+<h4>Evaluation of the remediation cost</h4>
+<p>For most rules, the SQALE remediation cost is constant per issue. The goal of this section is to help defining the value of this constant and to unify the way those estimations are done to prevent having some big discrepancies among language plugins. </p>
+<p>First step, classify the effort to do the remediation :</p>
+<ol>
+<li>TRIVIAL
+No need to understand the logic and no potential impact.
+Examples: remove unused imports, replace tabulations by spaces, remove call to System.out.println() used for debugging purpose, ...</li>
+<li>EASY
+No need to understand the logic but potential impacts.
+Examples: rename a method, rename a parameter, remove unused private method, ...</li>
+<li>MEDIUM
+Understanding the logic of a piece of code is required before doing a little and easy refactoring (1 or 2 lines of code). But understanding the big picture is not required.
+Examples : CURSORs should not be declared inside a loop, EXAMINE statement should not be used, IF should be closed with END-IF, ...</li>
+<li>MAJOR
+Understanding the logic of a piece of code is required and it's up to the developer to define the remediation action.
+Examples: Too many nested IF statements, Methods should not have too many parameters, UNION should not be used in SQL SELECT statements, Public java method should have a javadoc, Avoid using deprecated methods, ...</li>
+<li>HIGH
+The remediation action might lead to locally impact the design of the application.
+Examples: Classes should not have too many responsibilities, Cobol programs should not have too many lines of code, Architectural constraint, ...</li>
+<li>COMPLEX
+The remediation action might lead to impact the overall design of the application.
+Examples: Avoid cycles between packages, ...</li>
+</ol>
+<p>Then use the following table to get the remediation cost according to the required remediation effort and to the language:</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>Trivial</th>
+<th>Easy</th>
+<th>Medium</th>
+<th>Major</th>
+<th>High</th>
+<th>Complex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABAP, COBOL, ...</td>
+<td>10min</td>
+<td>20min</td>
+<td>30min</td>
+<td>1h</td>
+<td>3h</td>
+<td>1d</td>
+</tr>
+<tr>
+<td>Other languages</td>
+<td>5min</td>
+<td>10min</td>
+<td>20min</td>
+<td>1h</td>
+<td>3h</td>
+<td>1d</td>
+</tr>
+</tbody>
+</table>
+<p>For rules using either the "linear" or "linear with offset" remediation functions, the "Effort To Fix" field must be fed on each issue and this field is used to compute the remediation cost.  </p>
+<h4>Issue location(s) and highlighting</h4>
+<p>For any given rule, highlighting behavior should be consistent across languages within the bounds of what's relevant for each language.</p>
+<p>When possible, each issue should be raised on the line of code that needs correction, with highlighting limited to the portion of the line to be corrected. For example:</p>
+<ul>
+<li>an issue for a misnamed method should be raised on the line with the method name, and the method name itself should be highlighted.</li>
+</ul>
+<p>When correcting an issue requires action across multiple lines, the issue should be raised on the the lowest block that encloses all relevant lines. For example an issue for:</p>
+<ul>
+<li>method complexity should be raised on the method signature</li>
+<li>method count in a class should be raised on the class declaration</li>
+</ul>
+<p>When an issue could be made clearer by highlighting multiple code segments, such as a method complexity issue, additional issue locations may be highlighted, and additional messages may optionally be logged for those locations. In general, these guidelines should be followed for secondary issue locations:</p>
+<ul>
+<li>highlight the minimum code to show the line's contribution to the issue. </li>
+<li>avoid using an additional message if the secondary location is likely to be on the same issue as the issue itself. For example: the rule "Parameters should be final" will raise an issue on the method name, and highlight each non-final parameter. Since all locations are likely to be on the same line, additional messages would only confuse the issue.</li>
+<li>don't write a novel. The message for a secondary location is meant to be a hint to push the user in the right direction. Don't take over the interface with a narrative.</li>
+</ul></div></div></div><div class="page-footer"><a href="https://creativecommons.org/licenses/by-nc/3.0/us/" rel="noopener noreferrer" target="_blank" title="Creative Commons License"><img alt="Creative Commons License" src="https://licensebuttons.net/l/by-nc/3.0/us/88x31.png"/></a>© 2008-2019, SonarSource S.A, Switzerland. Except where otherwise noted, content in this space is licensed under a<!-- --> <a href="https://creativecommons.org/licenses/by-nc/3.0/us/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-NonCommercial 3.0 United States License.</a> <!-- -->SONARQUBE is a trademark of SonarSource SA. All other trademarks and copyrights are the property of their respective owners.</div></div></div></div></div></div><script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Promise,fetch,Object.assign,Symbol,Array.from"></script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-page-tsx","jsonName":"extend-adding-coding-rules-f0c","path":"/extend/adding-coding-rules/"};window.dataPath="337/path---extend-adding-coding-rules-f-0-c-394-FjayT6TbJLb3JrFIK9SJatGMbE";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-e743b4178f3070744d20.js"],"component---src-templates-page-tsx":["/component---src-templates-page-tsx-e1f2f2338cd4392feae4.js"],"pages-manifest":["/pages-manifest-1f5e96c7a321aeac4866.js"]};/*]]>*/</script><script src="/SonarQubeChineseDoc8.1/webpack-runtime-6e91c8c88db5dadb76ef.js" async=""></script><script src="/SonarQubeChineseDoc8.1/styles-9b5ac6bbef0df6896858.js" async=""></script><script src="/SonarQubeChineseDoc8.1/app-e743b4178f3070744d20.js" async=""></script><script src="/SonarQubeChineseDoc8.1/5-48610aee5c94767ee2f4.js" async=""></script><script src="/SonarQubeChineseDoc8.1/component---src-templates-page-tsx-e1f2f2338cd4392feae4.js" async=""></script></body></html>
