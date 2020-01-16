@@ -1,0 +1,187 @@
+{
+  "account": [],
+  "api_documentation": [],
+  "background_tasks": [
+    {
+      "link": "/documentation/analysis/background-tasks/",
+      "text": "About Background Tasks"
+    }
+  ],
+  "code": [],
+  "coding_rules": [
+    {
+      "link": "/documentation/instance-administration/quality-profiles/",
+      "text": "Quality Profiles"
+    },
+    {
+      "link": "/documentation/user-guide/keyboard-shortcuts/",
+      "text": "Keyboard Shortcuts"
+    }
+  ],
+  "component_measures": [
+    {
+      "link": "/documentation/user-guide/clean-as-you-code/",
+      "text": "Clean as You Code"
+    },
+    {
+      "link": "/documentation/user-guide/metric-definitions/",
+      "text": "Metric Definitions"
+    },
+    {
+      "link": "/documentation/user-guide/keyboard-shortcuts/",
+      "text": "Keyboard Shortcuts"
+    }
+  ],
+  "custom_measures": [
+    {
+      "link": "/documentation/instance-administration/custom-measures/",
+      "text": "About Custom Measures"
+    }
+  ],
+  "custom_metrics": [
+    {
+      "link": "/documentation/instance-administration/custom-measures/",
+      "text": "Custom Measures"
+    }
+  ],
+  "extension_billing": [
+    {
+      "link": "/documentation/sonarcloud-pricing/",
+      "text": "Pricing",
+      "scope": "sonarcloud"
+    }
+  ],
+  "global_permissions": [
+    {
+      "link": "/documentation/organizations/manage-team/",
+      "text": "Manage a Team",
+      "scope": "sonarcloud"
+    }
+  ],
+  "issues": [
+    {
+      "link": "/documentation/user-guide/keyboard-shortcuts/",
+      "text": "Keyboard Shortcuts"
+    }
+  ],
+  "marketplace": [],
+  "organization_members": [
+    {
+      "link": "/documentation/organizations/manage-team/",
+      "text": "Manage a Team",
+      "scope": "sonarcloud"
+    }
+  ],
+  "organization_projects": [
+    {
+      "link": "/documentation/organizations/manage-team/",
+      "text": "Manage a Team",
+      "scope": "sonarcloud"
+    }
+  ],
+  "organization_space": [
+    {
+      "link": "/documentation/organizations/overview/",
+      "text": "Organizations",
+      "scope": "sonarcloud"
+    }
+  ],
+  "overview": [
+    {
+      "link": "/documentation/user-guide/clean-as-you-code/",
+      "text": "Clean as You Code"
+    },
+    {
+      "link": "/documentation/branches/overview/",
+      "text": "Branches Analysis"
+    },
+    {
+      "link": "/documentation/analysis/pull-request/",
+      "text": "Analyzing Pull Requests"
+    }
+  ],
+  "permission_templates": [],
+  "profiles": [
+    {
+      "link": "/documentation/instance-administration/quality-profiles/",
+      "text": "Quality Profiles"
+    }
+  ],
+  "project_activity": [],
+  "project_baseline": [
+    {
+      "link": "/documentation/project-administration/new-code-period/",
+      "text": "New Code Period"
+    }
+  ],
+  "project_quality_gate": [
+    {
+      "link": "/documentation/user-guide/clean-as-you-code/",
+      "text": "Clean as You Code"
+    }
+  ],
+  "project_quality_profiles": [
+    {
+      "link": "/documentation/instance-administration/quality-profiles/",
+      "text": "About Quality Profiles"
+    }
+  ],
+  "projects_management": [
+    {
+      "link": "/documentation/analysis/overview/",
+      "text": "Analyze a Project",
+      "scope": "sonarcloud"
+    }
+  ],
+  "projects": [
+    {
+      "link": "/documentation/analysis/overview/",
+      "text": "Analyze a Project",
+      "scope": "sonarcloud"
+    }
+  ],
+  "pull_requests": [
+    {
+      "link": "/documentation/user-guide/clean-as-you-code/",
+      "text": "Clean as You Code"
+    },
+    {
+      "link": "/documentation/analysis/pull-request/",
+      "text": "Analyzing Pull Requests"
+    }
+  ],
+  "quality_gates": [
+    {
+      "link": "/documentation/user-guide/clean-as-you-code/",
+      "text": "Clean as You Code"
+    }
+  ],
+  "quality_profiles": [
+    {
+      "link": "/documentation/instance-administration/quality-profiles/",
+      "text": "Quality Profiles"
+    }
+  ],
+  "security_reports": [
+    {
+      "link": "/documentation/user-guide/security-reports/",
+      "text": "About Security Reports"
+    }
+  ],
+  "settings": [],
+  "system_info": [],
+  "user_groups": [
+    {
+      "link": "/documentation/organizations/manage-team/",
+      "text": "Manage a Team",
+      "scope": "sonarcloud"
+    }
+  ],
+  "users": [],
+  "webhooks": [
+    {
+      "link": "/documentation/project-administration/webhooks/",
+      "text": "About Webhooks"
+    }
+  ]
+}

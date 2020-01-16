@@ -1,0 +1,131 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+Pattern PLUGIN_NAME_PATTERN = Pattern.compile("(sonar-.*-plugin)(.*)")
+
+
+/**
+ * This module is building the zip file containing the static web site
+ */
+
+sonarqube {
+  skipProject = true
+}
+
+group = 'com.sonarsource.sonarqube'
+
+configurations {
+  bundledPlugin {
+    transitive = false
+  }
+}
+
+// loads the bundled_plugins.gradle of each edition
+// (they will all add there own bundled plugins to the bundledPlugin dependency configuration)
+apply from: new File(rootDir, 'sonar-application/bundled_plugins.gradle')
+File closeSourceDir = new File(rootDir, 'private');
+if (closeSourceDir.exists()) {
+  apply from: new File(closeSourceDir, 'edition-developer/bundled_plugins.gradle')
+  apply from: new File(closeSourceDir, 'edition-enterprise/bundled_plugins.gradle')
+  apply from: new File(closeSourceDir, 'edition-datacenter/bundled_plugins.gradle')
+}
+
+task extractAnalyzerDocFiles {
+  doLast {
+    configurations.bundledPlugin.files.each {
+      File file = it
+      copy {
+        from(zipTree(file).matching { include 'static/documentation.md' }) {
+          eachFile { fcd ->
+            Matcher m = PLUGIN_NAME_PATTERN.matcher(file.getName())
+            if (m.find()) {
+              fcd.relativePath = new RelativePath(true, m.group(1) + '.md')
+            }
+          }
+          includeEmptyDirs = false
+        }
+        into "$buildDir/tmp/plugin-documentation/"
+      }
+    }
+  }
+}
+
+yarn_run {
+  def docsVersion = version.split("[.-]").take(2).join('.')
+  environment = [ GATSBY_DOCS_VERSION: docsVersion ]
+  inputs.property('version', docsVersion)
+  inputs.dir('src').withPathSensitivity(PathSensitivity.RELATIVE)
+  ['gatsby-config.js', 'gatsby-node.js', 'package.json', 'yarn.lock', 'tsconfig.json'].each {
+    inputs.file(it).withPathSensitivity(PathSensitivity.RELATIVE)
+  }
+  outputs.dir('public')
+  outputs.cacheIf { true }
+  args = ['build']
+}
+// To clean outputs outside of "build" directory:
+clean.dependsOn(cleanYarn_run)
+
+"yarn_validate-ci" {
+  // Note that outputs are not relocatable, because contain absolute paths, and that's why inputs are not relativized
+  ['config', 'src'].each {
+    inputs.dir(it)
+  }
+  ['package.json', 'yarn.lock', 'tsconfig.json', '.eslintrc'].each {
+    inputs.file(it)
+  }
+  outputs.file('eslint-report.json')
+  outputs.dir('coverage')
+  outputs.cacheIf { true }
+
+  dependsOn(yarn)
+}
+
+task zip(type: Zip) {
+  def archiveDir = "$version"
+  duplicatesStrategy DuplicatesStrategy.EXCLUDE
+  baseName "sonar-docs"
+
+  into("${archiveDir}") {
+    from tasks.getByName('yarn_run').outputs
+  }
+}
+zip.dependsOn yarn_run
+assemble.dependsOn zip, extractAnalyzerDocFiles
+
+publishing {
+  publications {
+    docs(MavenPublication) {
+      artifactId 'sonar-docs'
+      artifact zip
+    }
+  }
+}
+
+artifactory {
+  publish {
+    contextUrl = System.getenv('ARTIFACTORY_URL')
+    repository {
+      repoKey = System.getenv('ARTIFACTORY_DEPLOY_REPO_PRIVATE')
+      username = System.getenv('ARTIFACTORY_DEPLOY_USERNAME_PRIVATE')
+      password = System.getenv('ARTIFACTORY_DEPLOY_PASSWORD_PRIVATE')
+    }
+  }
+}
+
+artifactoryPublish {
+  skip = false
+  publishPom = false
+  publications(publishing.publications.docs)
+}
+
+def sources = fileTree(dir: "src") + fileTree(dir: "config") + fileTree(dir: "plugins") + file("gatsby-config.js") + file("gatsby-node.js")
+
+task licenseCheckWeb(type: com.hierynomus.gradle.license.tasks.LicenseCheck) {
+  source = sources
+}
+licenseMain.dependsOn licenseCheckWeb
+
+task licenseFormatWeb(type: com.hierynomus.gradle.license.tasks.LicenseFormat) {
+  source = sources
+}
+licenseFormat.dependsOn licenseFormatWeb
