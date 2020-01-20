@@ -11,9 +11,9 @@ url: /user-guide/activity-history/
 ## 事件
 下列為 4 種事件：
 
-* 品質門：[quality gate](/user-guide/quality-gates/)的狀態已更改。
-* 品質規則組合：用於分析專案的[quality profile](/instance-administration/quality-profiles/) 已更改；已編輯品質規則組合；或已使用其他品質規則組合分析項目。
+* 品質門：[quality gate](/user-guide/quality-gates/) 的狀態已更改。
+* 品質規則組合：用於分析專案的 [quality profile](/instance-administration/quality-profiles/)  已更改；已編輯品質規則組合；或已使用其他品質規則組合分析項目。
 * 版本：專案的版本已更新。
-* 其它：事件已經手動建置。見[Managing History](/project-administration/managing-project-history/)
+* 其它：事件已經手動建置。見 [Managing History](/project-administration/managing-project-history/)。
 
-事件會顯示在[project front page](/user-guide/project-page/)及專案活動頁面裡。 
+事件會顯示在 [project front page](/user-guide/project-page/) 及專案活動頁面裡。 
