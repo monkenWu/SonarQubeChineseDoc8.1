@@ -1,5 +1,5 @@
 ---
-title: Quality Gates
+title: 質量門檻（ Quality Gates ）
 url: /user-guide/quality-gates/
 ---
 
