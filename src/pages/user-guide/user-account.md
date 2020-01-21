@@ -1,24 +1,25 @@
 ---
-title: User Account
+title: 使用者帳戶
 url: /user-guide/user-account/
 ---
 
-As a {instance} user you have your own space where you can see the things that are relevant to you:
+作為SonarQube的使用者，您擁有自己的空間，在那裡可以看到跟自己相關的事物。
 
-## Profile
+## 配置
 
 <!-- sonarqube -->
 
-It gives you a summary of:
+它為你提供以下摘要:
 
-- your Groups
-- your SCM accounts
+- 你的團體
+- 你的 SCM 帳戶
 
-## Security
+## 安全
 
-If your instance is not using a 3rd party authentication mechanism such as LDAP or an OAuth provider (GitHub, Google Account, ...), you can change your password from here. Additionally, you can also manage your own authentication tokens.
+如果你未使用LDAP或OAuth的第三方身份驗證機制(GitHub, Google 帳號, ...等)，則你可以在這此處更改你的密碼。此外，你也可以管理你的身分驗證權杖(authentication token)
 
 You can create as many Tokens as you want. Once a Token is created, you can use it to perform analysis on a project where you have the [Execute Analysis](/instance-administration/security/) permission.
+你可以根據你想要的數量創建權杖(Token)。當權杖(Token)生成後，你可以使用它對有[執行分析](/instance-administration/security/)權限的專案進行分析
 
 <!-- /sonarqube -->
 
