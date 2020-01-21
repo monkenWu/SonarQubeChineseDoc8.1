@@ -18,5 +18,4 @@ url: /user-guide/user-token/
 * 當在運行你的程式碼分析時:利用權杖(token)中的`sonar.login`屬性代替你的登入。
 * 當使用網頁服務時: 只要傳遞權杖(token)，而不用登錄即可做基本身分認證。
 
-In both cases, you don't need to provide a password (so when running analyses on your code, the property `sonar.password` is optional).
 在這兩種情況下，你都不需提供密碼(所以當運行你的程式碼分析時，`sonar.password`屬性是可以自行選擇的)
