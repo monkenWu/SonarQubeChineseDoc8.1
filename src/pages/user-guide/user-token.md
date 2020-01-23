@@ -1,21 +1,21 @@
 ---
-title: User Token
+title: 使用者權杖（Token）
 url: /user-guide/user-token/
 ---
 
-Each user has the ability to generate tokens that can be used to run analyses or invoke web services without access to the user's actual credentials.
+每個使用者都可以去生成一個權杖（token），這個權杖（token）可以用於運行分析和使用網頁服務而不需使用者的實際憑證。
 
-## How to Generate a Token
+## 如何生成權杖（Token）
 
-To generate a token, to go **User > My Account > Security**. Your existing tokens are listed here, each with a Revoke button.
+要生成權杖（token），到 **使用者（User） > 我的帳戶（My Account） > 安全（Security）**。 您現存的權杖（token）都在這裡，每一個權杖（token）都有撤消按鈕。
 
-The form at the bottom of the page allows you to generate new tokens. Once you click the **Generate** button, you will see the token value. Copy it immediately; once you dismiss the notification you will not be able to retrieve it.
+此頁面的底部允許你生成權杖（token），當你按下**生成（Generate）**按鈕時，你將會看到權杖（token）的值，請盡速將它紀錄下來，一旦取消通知後，你將無法再次找回它。
 
-## How to Use a Token
+## 如何使用權杖（token）
 
-User tokens have to be used as a replacement of your usual login:
+使用者權杖（token）是用來代替你的常規登入:
 
-* when running analyses on your code: replace your login by the token in the `sonar.login` property. 
-* when invoking web services: just pass the token instead of your login while doing the basic authentication.
+* 當在運行你的程式碼分析時:利用權杖（token）中的 `sonar.login` 屬性代替你的登入。
+* 當使用網頁服務時: 只需傳遞權杖（token），而不用登錄即可做基本身分認證。
 
-In both cases, you don't need to provide a password (so when running analyses on your code, the property `sonar.password` is optional).
+在這兩種情況下，你都不需提供密碼（所以當運行你的程式碼分析時， `sonar.password` 屬性是可以自行選擇的）
