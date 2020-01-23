@@ -1,14 +1,14 @@
 ---
-title: Built-in Rule Tags
+title: 內建規則標籤
 url: /user-guide/built-in-rule-tags/
 ---
-Tags are a way to categorize rules and issues. Issues inherit the tags on the rules that raised them. Some tags are language-specific, but many more appear across languages. Users can add tags to rules and issues, but most rules have some tags out of the box. Here is a non-comprehensive list of what some of those built-in tags mean:
+標籤是對規則和問題進行分類的一種方法。問題規則地繼承了引發它們的標籤。有些標籤僅適用於特定語言，但更多的標籤卻是跨語言的。使用者可以加入標籤至規則與問題中，但多數的規則都已具有現成的標籤。以下是部份內建規則標籤含義的列表：
 
-*NOTE : Links below to [rules.sonarsource.com](https://rules.sonarsource.com) will be initially filtered for Java language rules*
+*注意：以下的連結 [rules.sonarsource.com](https://rules.sonarsource.com) 已針對 Java 語法進行篩選*
 
-* [brain-overload](https://rules.sonarsource.com/java/tag/brain-overload) - there is too much to keep in your head at one time
-* [bad-practice](https://rules.sonarsource.com/java/tag/bad-practice) - the code likely works as designed, but the way it was designed is widely recognized as being a bad idea.
-* [cert](https://rules.sonarsource.com/java/tag/cert) - relates to a rule in a [CERT](https://www.securecoding.cert.org/confluence/x/BgE) standard. There are currently three CERT standards: [C](https://www.securecoding.cert.org/confluence/x/HQE), [C++](https://www.securecoding.cert.org/confluence/x/fQI), and [Java](https://www.securecoding.cert.org/confluence/x/Ux). Many of these rules are not language-specific, but are good programming practices. That's why you'll see this tag on non-C/C++, Java rules.
+* [大腦超載（brain-overload）](https://rules.sonarsource.com/java/tag/brain-overload)：一時間有太多事情需要記住。
+* [壞習慣（bad-practice）](https://rules.sonarsource.com/java/tag/bad-practice)：程式照著設計方向撰寫，但其設計方式實質上被廣泛認為是一個壞主意。
+* [憑證（cert）](https://rules.sonarsource.com/java/tag/cert)：與 [憑證](https://www.securecoding.cert.org/confluence/x/BgE) 中的標準有關。目前有三種 CRET 標準： [C](https://www.securecoding.cert.org/confluence/x/HQE), [C++](https://www.securecoding.cert.org/confluence/x/fQI), and [Java](https://www.securecoding.cert.org/confluence/x/Ux)。 Many of these rules are not language-specific, but are good programming practices. That's why you'll see this tag on non-C/C++, Java rules.
 * [clumsy](https://rules.sonarsource.com/java/tag/clumsy) - extra steps are used to accomplish something that could be done more clearly and concisely. (E.G. calling .toString() on a String).
 * [confusing](https://rules.sonarsource.com/java/tag/confusing) - will take maintainers longer to understand than is really justified by what the code actually does
 * [convention](https://rules.sonarsource.com/java/tag/convention) - coding convention - typically formatting, naming, whitespace...
