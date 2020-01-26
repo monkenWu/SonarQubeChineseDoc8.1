@@ -1,50 +1,49 @@
 ---
-title: Security Hotspots
+title: 安全性熱點（Security Hotspots）
 url: /user-guide/security-hotspots/
 ---
 
-## What is a Security Hotspot?
-Security Hotspots highlight security-sensitive pieces of code that need to be manually reviewed. Upon review, you'll either find that there is no threat or that there is vulnerable code that needs to be fixed. 
+## 什麼是 安全性熱點（Security Hotspots）？
+與 漏洞 不同，安全性熱點 不一定是容易受到攻擊的問題點。相反，安全性熱點重點顯示了需要人工檢查的安全性較敏感程式碼段落。經過審查，您可能會發現需要修正的漏洞也可能發現不構成威脅。
 
-## Why are Security Hotspots Important?
-Security Hotspots help you focus your efforts as you manually checking security-sensitive code. Reviewing Security Hotspots allows you to:
+## 為什麼 安全性熱點（Security Hotspots）很重要？
+安全性熱點 有助於您集中精力於檢查安全性較敏感的程式碼。通過查看 安全性熱點，您可以：
 
-* **Detect security issues** – You can detect vulnerable code and ensure issues are fixed before merging pull requests or releasing your branch.
-* **Learn about security** – You can see why your code was identified as a Security Hotspot and the link between your Security Hotspots and well-known attacks or weaknesses such as SQL Injection, Weak Cryptography, or Authentication. This helps you to know when you're working on security-sensitive code and to avoid creating vulnerable code.
-* **Learn how to fix vulnerable code** – From the Security Hotspots page, you can see why the Hotspot was raised, determine if you've used code in a security-sensitive way, and learn how to fix it if you have.
+* **解決安全問題** – 審查 安全性熱點 給您在 拉取請求（pull request）或發布分支前發現漏洞並且確認問題已修正的機會。
+* **了解安全性** – SonarQube 會向您解釋為什麼您的程式碼被標註為 安全性熱點，以及與眾所皆知的攻擊或弱點（例如 SQL注入、弱密碼，或身份驗證）之間的關聯。這會幫助您知道何時在寫安全性敏感的程式碼，且知道如何避免出現漏洞。
 
-## Lifecycle
-Security Hotspots have a dedicated lifecycle. To make status changes, the user needs the **Administer Security Hotspots** permission. This permission is enabled by default. Users with the **Browse** permission can comment on or change the user assigned to a Security Hotspot.
+## 安全性熱點生命週期（Security Hotspot Lifecycle）
+安全性熱點具有專用的生命週期，並且必須由具有「管理安全性熱點（Administer Security Hotspots）」權限的人員檢查。
 
-### Statuses  
-Through the lifecycle, a Security Hotspot takes one of the following statuses:
+### 狀態  
+在整個生命週期中，安全性熱點會處於以下狀態之一：
 
-* **To Review** – the default status of new Security Hotspots set by SonarQube. A Security Hotspot has been reported and needs to be checked.
-* **Reviewed** – a developer has manually assessed the Security Hotspot and either considered the code not vulnerable or any vulnerability issue that was found has been fixed.
+* **需審閱（To Review）** – SonarQube 設置的新安全性熱點的默認狀態。表示已報告安全性熱點，需要進行檢查。
+* **審查中（In Review）** – 安全性熱點 正被檢查，以確認程式中沒有漏洞。
+* **已查閱（Reviewed）** – 安全性熱點 已被檢查，並且無發現安全性問題。
 
-A Security Hotspot is only closed if the code containing it is deleted or the rule is deactivated.
+只有當包含安全性熱點的程式碼被刪除或禁用該規則時，該 安全性熱點 才會關閉。
 
-## Workflow  
-Follow this workflow to review Security Hotspots and fix any vulnerable code that you find.
+### 動作（Actions）
+您可以對 安全性熱點 採取以下動作：
+* **已審核且解決（Resolve as Reviewed）** – 程式碼中沒有漏洞。
+* **設定為正在審查（Set as In Review）** – 正在檢查是否有漏洞。
+* **重置為需審查（Reset as To Review）** – 安全性熱點 需再分析檢查一次。
+* **設為已知漏洞（Open as Vulnerability）** – 程式碼中有必須被修正的漏洞。
 
-### Review Priority
-When SonarQube detects a Security Hotspot, it's added to the list of Security Hotspots according to its review priority from High to Low. Hotspots with a High Review Priority are the most likely to contain vulnerable code and need your attention first. 
+### 工作流程  
+當 SonarQube 檢測到 安全性熱點 時，會將它標為需審查。您可以對 安全性熱點 採取一下動作：
+* 如果您在 安全性熱點 的程式碼位置發現了漏洞，您可以設為 **設為已知漏洞（Open as Vulnerability）**。
+* 如果您在 安全性熱點 的程式碼位置沒有找到漏洞，您可以標記為 **已審核且解決（Resolve as Reviewed）**。
+* 如果您想標記 安全性熱點 以顯示您將要或正在審查它的漏洞，您可以 **設定為正在審查（Set as In Review）**。這是 工作流程 中選擇性的步驟。
+如果您將 安全性熱點 已設定為 **正在審查（In Review）**，它可以被標記為以下兩種：
+* 如果您在 安全性熱點 的程式碼位置發現了漏洞，您可以設為 **設為已知漏洞（Open as Vulnerability）**。
+* 如果您在 安全性熱點 的程式碼位置沒有找到漏洞，您可以 **標注為已審查（Resolve as Reviewed）**。
+當確定安全性熱點位置存在漏洞並選擇 **設為已知漏洞** 時，其狀態從 **正在查看** 或 **正在查看** 變為 **開啟**。這會將 安全性熱點 轉換為 漏洞，並且上次接觸該代碼行的開發人員將收到「新問題」通知（如果她有註冊獲取該通知）。
 
-Review Priority is determined by the security category of each security rule. Rules in categories that are ranked high on the OWASP Top 10 and CWE Top 25 standards are considered to have a High Review Priority. Rules in categories that aren't ranked high or aren't mentioned on the OWASP Top 10 or CWE Top 25 standards are rated as Medium or Low.
+在 安全性熱點 位置開啟漏洞後，將發生以下情況：
+1. 將 安全性熱點 分配給適當的開發人員，然後開發人員進行修復。
+2. 然後，開發人員通過使用者介面將 漏洞 標記為 **已審核且解決（Resolve as Reviewed）**，這會將 漏洞 恢復為 安全性熱點。
+3. 然後，安全性熱點被標記為 **已審核（Reviewed ）**，並且其狀態為 **已修復（Fixed）**。
 
-### Reviewing Hotspots  
-When reviewing a Hotspot, you should:
-
-1. Review the **What's the risk** tab to understand why the Security Hotspot was raised.
-1. From the **Are you vulnerable** tab, read the **Ask Yourself Whether** section to determine if the code is used in a security-sensitive way.
-1. From the **How can you fix it** tab, follow the **Recommended Secure Coding Practices** to fix your code if you've determined it's unsafe.
-
-After following these steps, set the Security Hotspot to one of the following:
-
-* **Fixed** – if you found vulnerable code and have modified it to follow secure coding practices.
-* **Safe** – if the code already follows secure coding practices and doesn't need to be modified.
-* **Needs additional review** – if you need another user's review to make sure the Security Hotspot doesn't contain vulnerable code.
-
-### Review History
-
-The **Review history** tab shows the history of the Security Hotspot including the status it's been assigned and any comments the reviewer had regarding the Hotspot.  
+如果確定確實存在問題，則可以隨時重新開啟已審查的 安全熱 點作為 漏洞。

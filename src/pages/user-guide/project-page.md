@@ -1,54 +1,55 @@
 ---
-title: Project Page
+title: 專案頁面
 url: /user-guide/project-page/
 ---
 
 
-The Project Hompepage is the entry point of any project showing:
-* the releasability status of the project
-* the current state of its quality
-* the quality of what has been produced since the beginning of its [New Code Period](/user-guide/clean-as-you-code/).
- 
+專案首頁（Project Hompepage）是顯示以下內容的入口：
+* 專案的可發布狀態
+* 專案現在的品質狀態
+* 自上次 [新程式碼週期（New Code Period）](/user-guide/clean-as-you-code/)以來的產品品質
 
-The Project Page answers two questions:
-* can I release my project today?
-* if not, what should I improve to make the project pass the Quality Gate? 
 
-## Can I release today?
+專案也面能回答以下兩個問題：
+* 我今天可以發布我的專案嗎？
+* 如果不行，我應該怎麼改進才能讓專案通過 品質門檻（Quality Gate）？
 
-Since the [Quality Gate](/user-guide/quality-gates/) is your most powerful tool to enforce your quality policy, the page starts with the project's current Quality Gate status. If the project passes, a simple, green all-clear is shown.
+## 我今天可以發布我的專案嗎？
 
-If not, details and drill-downs are immediately available to quickly identify what went wrong, with a section for each error condition showing what the current project value is and what it should be. As usual, you'll be able to click through on current values to get to drilldowns.
+既然 [品質門檻（Quality Gate）](/user-guide/quality-gates/)是您最強而有效的品質保證策略，那麼此頁首要顯示專案的「品質門檻」通過狀態。如果通過了，便會顯示「完全通過」（all-clear）的綠燈。
 
-## What should I fix first?
-Because the best way to improve a project's quality is to catch and fix new problems before they become entrenched, the first view of a project is centered around the New Code Period, which is highlighted in yellow on the right of the project homepage. The project space page shows a high-level summary of critical metrics, both current values and their New Code Period values.
+如果沒有過，則可以透過詳細訊息與深入分析來了解哪邊出了問題，每個錯誤情況都有一個區塊，顯示當前專案的值為何以及應該是什麼。像往常一樣，您可以透過點擊當前值以取得更深入的分析。
 
-Just below the Quality Gate information, you have the numbers of old and new Issues in the Reliability and Security domains and then the Maintainability domain. Clicking on any figure on the page will take you to a detailed view, either in the Measures Page or the Issues Page.
+## 我應該先解決什麼？
 
-The most important thing a developer must do is to ensure the new Issues in the yellow part of the screen are acknowledged, reviewed and fixed and to make sure that new code is covered by tests to help prevent future regressions. Regardless of how many Issues were introduced in the past or how little test coverage there is overall, a focus on the newly added Issues will ensure that the situation won't degrade versus the version you previously released in production.
+由於改善專案品質的最佳方式為在新的問題根深蒂固前找出並解決，專案的首先可看見以 新程式碼週期（New Code Period）中心，在專案首頁的右側以黃色明示。在專案空間頁顯示有關鍵指標的高階摘要，包括當前值以及「新程式碼週期」的值。
 
-So, which issues should you go after first: Bugs, Vulnerabilities or Code Smells? It depends, because the answer is dependent on the nature of your Issues. Let's say you have issues for a block of code that is duplicated 5 times, and inside this duplicated block of code, you have 3 Bugs and 5 Security Issues. The best approach is probably to fix the duplication first and then resolve the Bugs and Vulnerabilities in the newly centralized location, rather than fixing them 5 times.
+在 品質門檻（Quality Gate）底下分別在 可靠性（Reliability）、安全性（Security）、可維護性（Maintainability）顯示有舊與新問題的數量。點擊頁面上的任何物件都會帶您進入 度量頁面（Measures Page）或是 問題（Issues Page）的詳細資訊。
 
-That's why you need to review your new Issues before jumping into resolving them. 
+開發人員必須做的最重要的是確認、審查，及修正那些黃區裡的新 問題（Issues），並且確保新的程式碼有被測試所涵蓋以防未來重蹈覆轍。無論過去引入了多少個「問題」或總體上沒有多少測試內容，對新添加的「問題」的關注都將確保與您先前在生產中發布的版本相比，情況不會惡化。
 
-## How can I ...
-### How can I see project measures at a lower level?
-The project-level **Measures** menu item takes you to a dedicated sub-space where you see all project measures. Choose a measure for more details. Both list and tree views are available for each measure, and treemaps are available for percentages and ratings.
+那麼，您應該先解決哪些問題：錯誤（Bugs）、漏洞（Vulnerabilities），或是 程式碼壞味道（Code Smells）？答案取決於您問題的性質。假設您在重複5次的程式碼塊中遇到問題，並且在此重複的程式碼塊中有3個 錯誤 和5個安全問題。最好的方法可能是先修復重複項，然後在新集中的位置解決 錯誤 和 漏洞，而不是將它們修正5次。
 
-### How can I see all the issues in a project?
-The project-level **Issues** menu item takes you to a project-specific Issues page, where you can perform all the same actions you can at the higher level.
-On this page, you can easily narrow the list to the New Issues introduced during the New Code Period, by selecting `New Code` in **Creation Date** facet.
+這就是為甚麼你應該在解決新 問題 前，先審查它們。
 
-### How can I see the project structure and code?
-The project-level **Code** menu item takes you to an outline of your project structure. Drill down to see files in a directory, and choose a file to see its code.
+## 我該如何．．．
+### 我該如何看見較低階的專案措施？
+專案級 **度量（Measures）** 菜單項將帶您到專用子空間，在其中您可以查看所有專案度量。選擇一種 度量 以獲取更多詳細信息。每種 度量 均可以列表及樹狀圖顯示，樹狀圖可用於百分比和等級。
 
-If your project is too large for easy exploration via drilling, the search feature on this page will help. While the global search in the main menu returns results from throughout the {instance} instance, the localized search on the code page is restricted to files and directories in the current project.
+### 我該如何查看專案中的所有 問題（Issue）？
+專案級別的 **問題** 選單項目將帶您到特定專案的 問題 頁面，您可以在其中執行所有在更高級別中可做的相同操作。
+在此頁面上，可以藉由在 **創建日期（Creation Date）** 介面中選擇 新程式碼（New Code），輕鬆地將列表縮減至 新程式碼週期（New Code Period）產生的 新問題。
 
-### How can I see the project activity / history?
-The project-level **Activity** menu item takes you to the full list of code scans performed on your project since it was created in {instance}. By going there you can follow the evolution of the Quality Gate, see the changes of Quality Profiles and know when a given version of your code has been scanned.
+### 我該如何查看專案架構與程式碼？
+專案級別的 **程式碼（Code）** 選單項目將帶您到專案架構的大綱。點入後可查看目錄中的文件，然後選擇一個文件以查看其程式碼。
 
-### How can I easily spot the risks in a project?
-Visualizations allow you to compare project components and quickly spot the ones that represent the greatest risks. The **Activity** page offers several pre-defined visualizations, and you can also create Custom visualizations with the metrics of your choice.
+如果您的專案太大，無法輕鬆透過點入閱覽，則此頁面上的搜索功能會有所幫助。主選單中的全域搜索會取得整個 SonarQube 實例的結果，而 程式碼（Code）頁面 上的搜索僅限於當前專案中的文件和目錄。
 
-### How can I promote the health of my project to peers ?
-If your project is publicly visible, then you can further promote its status in external tools and websites using native Project Badges. The **Get project badges** button on the homepage of a public project lets you choose/fine-tune your badge and gives you the URL for it.
+### 我該如何查閱專案的 活動（Activity）/ 歷史紀錄（History）？
+專案級別的 **活動（Activity）** 選單項目將帶您進入對專案自在 SonarQube 中建立以來，執行的程式碼掃描結果的完整列表。在那裡，您可以追蹤 品質們檻（Quality Gate）的發展與更改，以及了解何時掃描了給定版本的程式碼。
+
+### 我該如何輕鬆的看專案中的風險？
+視覺化使您可以比較專案中元件，並且快速發現那些表現出最大風險的部分。 **活動（Activity）**　頁面提供了幾個預設的視覺化選項，並且您還可以使用自訂的指標來建立 自訂視覺化選項（Custom visualizations）。
+
+### 我該如何讓同行知道我程式碼的「健康」狀況？
+如果您的專案是公開可見的，則可以在外部工具和網站中使用 原生專案徽章（native Project Badges）進一步提升其狀態。公共專案首頁上的「獲取專案徽章」按鈕使您可以選擇/微調徽章，並為其提供網址。
