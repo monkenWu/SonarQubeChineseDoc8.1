@@ -54,4 +54,4 @@ SonarQube將每個項目的字母評級轉換為數字（請參見下方的轉�
 
 **注意：** 僅在計算完作品集（Portfolios）後，你才會收到 PDF。
 
-在作品集（Portfolios）全局管理設定中可以創建和編輯作品集（Portfolios）：**管理（Administration） > 配置（Configuration） > 作品集（Portfolios）（Portfolios）**。想看更多資訊，請至[作品集（Portfolios）配置和應用程式（Configuring Portfolios and Applications）](/project-administration/configuring-portfolios-and-applications/)。
+在作品集（Portfolios）全局管理設定中可以創建和編輯作品集（Portfolios）：**管理（Administration） > 配置（Configuration） > 作品集（Portfolios）（Portfolios）**。想看更多資訊，請至 [作品集（Portfolios）配置和應用程式（Configuring Portfolios and Applications）](/project-administration/configuring-portfolios-and-applications/)。

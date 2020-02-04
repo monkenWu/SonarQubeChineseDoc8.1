@@ -18,7 +18,7 @@ url: /user-guide/user-account/
 
 如果你未使用 LDAP 或 OAuth 的第三方身份驗證機制（GitHub, Google 帳號, ...等），則你可以在這此處更改你的密碼。此外，你也可以管理你的身分驗證權杖（authentication token）
 
-你可以根據你想要的數量創建權杖（Token）。當權杖（Token）生成後，你可以使用它對有[執行分析](/instance-administration/security/)權限的專案進行分析
+你可以根據你想要的數量創建權杖（Token）。當權杖（Token）生成後，你可以使用它對有 [執行分析](/instance-administration/security/)權限的專案進行分析
 
 <!-- /sonarqube -->
 
