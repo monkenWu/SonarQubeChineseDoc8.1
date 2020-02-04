@@ -1,52 +1,52 @@
 ---
-title: Keyboard Shortcuts
+title: 鍵盤快捷鍵
 url: /user-guide/keyboard-shortcuts/
 ---
 
-## Global
+## 全域（Global）
 
-| Shortcut | Action          |
+| 快捷鍵 | Action          |
 | -------- | --------------- |
-| `s`      | open search bar |
-| `?`      | open help       |
+| `s`      | 開啟搜尋欄 |
+| `?`      | 開啟幫助       |
 
-## Code Page
+## 程式碼頁面（Code Page）
 
-| Shortcut | Action                                        |
+| 快捷鍵 | 執行動作                                        |
 | -------- | --------------------------------------------- |
-| `↑` `↓`  | select files                                  |
-| `→`      | open file                                     |
-| `←`      | return back to the list                       |
+| `↑` `↓`  | 選擇文件                                     　|
+| `→`      | 開啟文件                                     　|
+| `←`      | 返回列表                       　　　　　　 　　|
 
-## Issues Page
+## 問題頁面（Issues Page）
 
-| Shortcut         | Action                                        |
+| 快捷鍵         | 執行動作                                        |
 | ---------------- | --------------------------------------------- |
-| `↑` `↓`          | navigate between issues                       |
-| `→`              | go from the list of issues to the source code |
-| `←`              | return back to the list                       |
-| `alt` + `↑` `↓`  | to navigate issue locations                   |
-| `alt` + `←` `→`  | to switch flows                               |
-| `f`              | do an issue transition                        |
-| `a`              | assign issue                                  |
-| `m`              | assign issue to the current user              |
-| `i`              | change severity of issue                      |
-| `c`              | comment issue                                 |
-| `ctrl` + `enter` | submit comment                                |
-| `t`              | change tags of issue                          |
+| `↑` `↓`          | 上下瀏覽問題　　　　　                          |
+| `→`              | 從問題列表至原始碼　　　　　　　　　　　　　　　　 |
+| `←`              | 返回列表                       　　　　　　　　　|
+| `alt` + `↑` `↓`  | 瀏覽問題位置　　　　　　　　　                   |
+| `alt` + `←` `→`  | 切換流量（flows）　　                          |
+| `f`              | 進行問題過度                        |
+| `a`              | 分配問題                                  　　　|
+| `m`              | 將問題分配給當前使用者              　　　　　　　|
+| `i`              | 更改問題的嚴重性                      　　　　　|
+| `c`              | 評論問題                                 　　　|
+| `ctrl` + `enter` | 提交評論                                　　　　|
+| `t`              | 更改問題標籤                        　　　　　  |
 
-## Measures Page
+## 測量頁面（Measures Page）
 
-| Shortcut | Action                                        |
+| 快捷鍵 | 執行動作                                        |
 | -------- | --------------------------------------------- |
-| `↑` `↓`  | select files                                  |
-| `→`      | open file                                     |
-| `←`      | return back to the list                       |
+| `↑` `↓`  | 選擇文件                                     　|
+| `→`      | 開啟文件                                     　|
+| `←`      | 返回列表                       　　　　　　 　　|
 
-## Rules Page
+## 規則頁面（Rules Page）
 
-| Shortcut | Action                                        |
+| 快捷鍵 | 執行動作                                        |
 | -------- | --------------------------------------------- |
-| `↑` `↓`  | navigate between rules                        |
-| `→`      | go from the list of rules to the rule details |
-| `←`      | return back to the list                       |
+| `↑` `↓`  | 上下瀏覽規則        　　　　　　                |
+| `→`      | 從規則列表至規則詳細訊息                        |
+| `←`      | 返回列表              　                       |
