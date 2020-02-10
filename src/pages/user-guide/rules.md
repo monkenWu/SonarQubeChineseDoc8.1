@@ -1,33 +1,32 @@
 ---
-title: Rules
+title: 規則
 url: /user-guide/rules/
 ---
-## Overview
-In {instance}, analyzers contribute rules which are executed on source code to generate issues. There are four types of rules:
-* Code Smell (Maintainability domain)
-* Bug (Reliability domain)
-* Vulnerability (Security domain)
-* Security Hotspot (Security domain)
+## 簡介
+在｛實例｝中，分析器提供了在程式碼執行上的規則來產生問題。其規則有四種： 
+* 程式碼異味（可維護性 域）
+* 錯誤（可靠性 域）
+* 漏洞（安全 域）
+* 安全疑慮熱點（安全 域）
 
-For Code Smells and Bugs, zero false-positives are expected. At least this is the target so that developers don't have to wonder if a fix is required.
+對於程式碼異味與錯誤，我們期望的是零錯誤回報，至少這是我們的目標，這樣一來開發人員就不用懷疑是否需要修復。 
 
-For Vulnerabilities, the target is to have more than 80% of issues be true-positives.
+對於漏洞，目標是要上80%以上的議題為正確回報。 
 
-Security Hotspot rules draw attention to code that is security-sensitive. It is expected that more than 80% of the issues will be quickly resolved as "Reviewed" after review by a developer.
+安全性熱點規則吸引安全性敏感的程式碼的注意，在開發人員審查之後，預計超過80%的問題會被迅速的解決為「已審查」。
 
-The Rules page is the entry point where you can discover all the existing rules or create new ones based on provided templates.
+規則頁面是可以發現所有 已存在的規則 或 基於所提供的模板創建新規則 的入口 
 
-## Rules
+## 規則
 
-By default, when entering the top menu item "Rules", you will see all the available rules brought by the analyzers <!-- sonarqube -->installed on your {instance} instance<!-- /sonarqube --><!-- sonarcloud -->available on SonarCloud<!-- /sonarcloud -->. You have the ability to narrow the selection based on search criteria in the left pane:
-
-* **Language**: the language to which a rule applies.
-* **Type**: Bug, Vulnerability, Code Smell or Security Hotspot rules.
-* **Tag**: it is possible to add tags to rules in order to classify them and to help discover them more easily.
-* **Repository**: the engine/analyzer that contributes rules to {instance}.
-* **Default Severity**: the original severity of the rule - as defined by the analyzer that contributes this rule.
-* **Status**: rules can have 3 different statuses:
-  * **Beta**: The rule has been recently implemented and we haven't gotten enough feedback from users yet, so there may be false positives or false negatives.
+在預設條件下，當你進入菜單頂端的「規則」項目時，您將看到由 <!-- sonarqube --> 安裝在｛實例｝上的 <!-- /sonarqube --> 分析器帶來的 <!-- sonarcloud --> SonarCloud 上所有可用的 <!-- /sonarcloud -->。 您可以基於左側的選項面板縮小搜尋的準則： 
+* **語言**: 規則所適用的語言。
+* **種類**: 錯誤、漏洞、程式碼異味或安全疑慮熱點規則。 
+* **標記**: 為了分類與幫助您可以更容易地發現，為規則增加標籤是可行的。 
+* **儲存庫**: 提供規則給｛實例｝的引擎／分析器。
+* **預設嚴重程度**: 規則的嚴重原始程度  --- 與提供此規則的分析器所規定的一致。
+* **狀態**: 規則可以三種不同的狀態：
+  * **測試**: 該規則近期才被實施，並且我們尚未從使用者得到足夠的回饋，因此可能會存在一些錯誤的正確回報與錯誤的錯誤回報。 
   * **Deprecated**: The rule should no longer be used because a similar, but more powerful and accurate rule exists.
   * **Ready**: The rule is ready to be used in production.
 * **Available Since**: date when a rule was first added on {instance}. This is useful to list all the new rules since the last upgrade of a plugin for instance.
