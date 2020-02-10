@@ -1,23 +1,23 @@
 ---
-title: Visualizations
+title: 視覺化
 url: /user-guide/visualizations/
 ---
-Visualizations are available to help you gain deeper insights into your projects' current statuses and histories.
+視覺化能幫助你深入的了解你的專案當前的狀態與歷史 。 
 
-## How do I compare current state for multiple projects or project components?
-The Projects space allows you to filter the projects in your instance by multiple, measure-based criteria. Once you've chosen your set, you don't have to stare at the raw numbers to identify the risks its projects face. Instead, several visualizations (**Projects > Perspective**) are available to help you understand each project's relative position in terms of each of the major axes:
+## 我該如何為多個專案或專案元件比較當前狀況 ? 
+透過 ” 專案 ” 空間，你可以透過數個測量準則來過濾實例中的項目。一旦你選擇了你的集合，你就不用需要盯著原始數字即可確定項目所面臨的風險。替代的是，透過數個視覺化效果 ( 專案 > 透視圖 ) 來幫助你了解每個專案在每個主軸上的相對位置： 
 
-* Risk - Reliability and Security ratings, test coverage, technical debt, and lines of code
-* Reliability - Reliability rating, Reliability remediation effort, lines of code, and Bug count
-* Security - Security rating, Security remediation effort, lines of code, and Vulnerability count
-* Maintainability - Maintainability rating, Technical debt, lines of code, and Code Smell count
-* Coverage - Coverage, complexity, and uncovered lines
-* Duplications - Duplicated Lines %, lines of code, and duplicated blocks
-* At the project level these same visualizations are available in the Measures tab to help you compare project components. The Project Overview corresponds to the Risk visualization in the Projects space, For the other five graphs, choose the Overview option under the relevant domain.
+* 風險 – 可靠性與安全性等級，測試範圍，技術負債，以及程式碼行數。 
+* 可靠性 – 可靠性等級，可靠性補救措施，程式碼行數，以及臭蟲計算。 
+* 安全性 – 安全性等級，安全性補救措施，程式碼行數，漏洞計算。 
+* 可維護性 – 可維護性等級，技術負債，程式碼行數，以及程式碼氣味計算。 
+* 覆蓋率 – 覆蓋率，複雜度，以及未覆蓋的線路。 
+* 複製 – 複製的程式碼 % ，程式碼行數，以及複製的區塊。 
+* 在專案級別中，這些相同的視覺化效果在“測量”欄位可用以當祝你比較項目元件。“專案概述”對應於“專案”空間中的“風險”視覺化。對於其他的五個圖形，你可以在相關域之下選擇“概述”選項。 
 
-Additionally, treemaps are also available for percentage and rating metrics at the project level. Navigate to them in the Measures tab using the perspective selector in the right pane.
+此外，樹狀圖還可以在專案級別中使用百分比與評定指標。在右邊窗格中使用透視圖選擇器在“測量”標籤中導向它。 
 
-## How do I visualize metric history?
-At the project level, the Activity tab offers several canned line graphs of selected metrics across time, with convenient mouseovers to show graph details and the ability to easily narrow the graph to a slice of the project's history. Beyond the canned graphs, you also have the ability to map the metrics of your choice against each other in a Custom graph.
+##  我如何將度量歷史視覺化？
+在專案級別中，“活動”標籤提供跨時間的多個選定指標的固定折線圖，並且具很方便的，滑鼠懸停即可喜善圖上的詳細訊息以及可以輕鬆的將圖縮小歷史紀錄的一部份的功能。除了固定的圖表之外，你還可以在“自定義”圖表中選擇相互比較的指標。 
 
 ![](/images/visualizations.png)
