@@ -1,8 +1,10 @@
 ---
-title: Security-related Rules
+title: 安全相關的規則
 url: /user-guide/security-rules/
 ---
-The {instance} Quality Model has three different types of rules: Reliability (bug), Vulnerability (security), and Maintainability (code smell) rules. But divided another way, there are only two types: security rules, and all the rest. The distinction between these two groups is not so much in what they catch but in where they come from and in the standards imposed on them.
+ 
+
+｛實例｝品質模組有三種不同種類的規則：可靠性（錯誤），脆弱性（安全），以及維護性（程式碼異味）規則。但是用其他方法區分，只會有兩種種類：安全規則，以及其他剩餘的規則。這兩個種類在他們所擷取到的東西沒有太大的區別，而是在他們的出處以及加註在他們之上的標準。 
 
 ## What to expect from security-related rules
 To be clear, the standard for most rules implemented in {instance} language plugins is very strict: no false positives. For normal rules, you should be able to be confident that whatever is reported to you as an issue really is an issue.
