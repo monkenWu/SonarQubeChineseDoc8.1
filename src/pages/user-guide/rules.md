@@ -20,114 +20,114 @@ url: /user-guide/rules/
 ## 規則
 
 在預設條件下，當你進入菜單頂端的「規則」項目時，您將看到由 <!-- sonarqube --> 安裝在｛實例｝上的 <!-- /sonarqube --> 分析器帶來的 <!-- sonarcloud --> SonarCloud 上所有可用的 <!-- /sonarcloud -->。 您可以基於左側的選項面板縮小搜尋的準則： 
-* **語言**: 規則所適用的語言。
-* **種類**: 錯誤、漏洞、程式碼異味或安全疑慮熱點規則。 
-* **標記**: 為了分類與幫助您可以更容易地發現，為規則增加標籤是可行的。 
-* **儲存庫**: 提供規則給｛實例｝的引擎／分析器。
-* **預設嚴重程度**: 規則的嚴重原始程度  --- 與提供此規則的分析器所規定的一致。
-* **狀態**: 規則可以三種不同的狀態：
-  * **測試**: 該規則近期才被實施，並且我們尚未從使用者得到足夠的回饋，因此可能會存在一些錯誤的正確回報與錯誤的錯誤回報。 
-  * **Deprecated**: The rule should no longer be used because a similar, but more powerful and accurate rule exists.
-  * **Ready**: The rule is ready to be used in production.
-* **Available Since**: date when a rule was first added on {instance}. This is useful to list all the new rules since the last upgrade of a plugin for instance.
-* **Template**: display rule templates that allow to create custom rules (see later on this page).
-* **Quality Profile**: inclusion in or exclusion from a specific profile
+* **語言** ： 規則所適用的語言。
+* **種類** ： 錯誤、漏洞、程式碼異味或安全疑慮熱點規則。 
+* **標記** ： 為了分類與幫助您可以更容易地發現，為規則增加標籤是可行的。 
+* **儲存庫** ： 提供規則給｛實例｝的引擎／分析器。
+* **預設嚴重程度** ： 規則的嚴重原始程度  --- 與提供此規則的分析器所規定的一致。
+* **狀態** ： 規則可以三種不同的狀態：
+  * **測試** ： 該規則近期才被實施，並且我們尚未從使用者得到足夠的回饋，因此可能會存在一些錯誤的正確回報與錯誤的錯誤回報。 
+  * **不推薦使用** ： 該規則不應該再被使用由於一個相似，但又更加的有力與準確的規則存在。 
+  * **預備**: 該規則已經可以被應用在生產中。 
+* **可用自** ： 當一個規則初次被加入｛實例｝中。這對列出上次實例插件的更新是很實用的。 
+* **模板** ： 展示允許創造客製化規則的模板（稍後此頁會敘述） 
+* **品質設定檔** ： 從一個特定的設定檔中引入或排除。 
 
-If a quality profile is selected, it is also possible to check for its active severity and whether it is inherited or not. See the Quality Profile documentation for more.
+如果一個品質設定檔被選定，您也可以檢視它的啟用嚴重程度以及它是否被繼承。更多資訊請看品質設定檔文件。 
 
-## Rule Details
+## 詳細規則
 
-To see the details of a rule, either click on it, or use the right arrow key. Along with basic rule data, you'll also be able to see which, if any, profiles it's active in and how many open issues have been raised with it.
+欲看到一個規則的詳細規定，你可以選擇點選它，或者使用右箭頭的按鈕。隨著基本的規則資料，你也能夠看到是否有任何設定檔是啟用的以及它產生了多少開放問題。 
 
-The following actions are available only if you have the right permissions ("Administer Quality Profiles and Gates"):
+以下的動作只有在擁有正確的權限下才可進行（管理品質設定檔與門檻）： 
 
-* **Add/Remove Tags**:
-  * It is possible to add existing tags on a rule, or to create new ones (just enter a new name while typing in the text field).
-  * Note that some rules have built-in tags that you cannot remove - they are provided by the plugins which contribute the rules.
-* **Extend Description**:
-  * You can extend rule descriptions to let users know how your organization is using a particular rule or to give more insight on a rule.
-  * Note that the extension will be available to non-admin users as a normal part of the rule details.
+* **增加／移除 標籤** ： 
+  * 增加標籤在現有的規則上，或建立新的標籤，是可行的（只要在文字框輸  入時輸入一個新的名字即可）。 
+  * 注意有些規則具有無法移除的內建標籤，他們的來源是提供規則的的插件。 
+* **擴充描述** ： 
+  * 你可以擴充規則敘述來讓使用者知道你的組織是如何使用一個特定的規則或給予一個規則更深層的敘述。 
+  * 注意，被擴充的敘述將會被當成正常的規則詳細敘述提供給非管理員使用者使用。 
 
 <!-- sonarqube -->
-## Rule Templates and Custom Rules
+## 規則模板與客製化規則 
 
-Rule Templates are provided by plugins as a basis for users to define their own custom rules in {instance}. To find templates, select the **Show Templates Only** facet from the the "Template" dropdown:
+規則模板是由插件所提供，作為用戶在｛實例｝中定義自己的客製化規則的基礎。欲找到模板，從模板下拉選單中選擇 **僅顯示模板** 畫面： 
 
 ![Rule templates.](/images/rule-templates.png)
 
-To create a custom rule from a template click the **Create** button next to the "Custom Rules" heading and fill in the following information:
-* Name
-* Key (auto-suggested)
-* Description (Markdown format is supported)
-* Default Severity
-* Status
-* The parameters specified by the template
+若要從模板建立一個客製化規則請點選「客製化規則」標題旁邊的 **建立按鈕** 並填入以下資訊： 
+* 名稱
+* 金鑰（自動建議）
+* 描述（支援 Markdown 格式）
+* 預設危險程度
+* 狀態
+* 模板指定的參數
 
-You can navigate from a template to the details of custom rules defined from it by clicking the link in the "Custom Rules" section.
+透過點擊「客製化規則」區域裡的連結，你可以從一個模板導航至被它所定義的客製化規則的詳細內容。 
 
 ![Rule template details.](/images/rule-template-details.png)
 
-### Custom Rules
-Custom Rules are considered like any other rule, except that you can edit or delete them:
+### 客製化規則
+你除了可以編輯或刪除以外，客製化規則跟一般的規則一樣：
 
 ![Custom rules.](/images/rules-custom.png)
 
-**Note:** When deleting a custom rule, it is not physically removed from the {instance} instance. Instead, its status is set to "REMOVED". This allows current or old issues related to this rule to be displayed properly in {instance} until they are fully removed.
+**注意 ：** 當你刪除一個客製化規則，它並不是實際上從｛實例｝中移除實例，而是它的狀態被設成「被移除」而已。這允許與此規則相關當前的或是舊的議題被正確的顯示在｛實例｝中直到他被完全的移除。 
 
-## Extending Coding Rules
+## 擴充程式設計的規則
 
-Custom coding rules can be added. See [Adding Coding Rules](/extend/adding-coding-rules/) for detailed information and tutorials.
+客製化程式設計規則是可以增加的。 詳情與教學請見 [增加程式設計規則](/extend/adding-coding-rules/)。
 <!-- /sonarqube -->
 
-## Rule Types and Severities
+## 規則種類與嚴重性 
 
-### How are rules categorized?
+### 規則是如何被分類的？
 
-The {instance} Quality Model divides rules into four categories: Bugs, Vulnerabilities, Security Hotspots, and Code Smells. Rules are assigned to categories based on the answers to these questions:
+｛實例｝品質模型將規則分為四個類別 ： 錯誤、漏洞、安全熱點，以及程式碼異味。規則基於以下問題的答案被指派到各類別去。 
 
-**Is the rule about code that is demonstrably wrong, or more likely wrong than not?**  
-If the answer is "yes", then it's a Bug rule.  
-If not...
+**是否這條關於程式碼的規則很明顯是錯的或者是有很大的可能為錯誤？ **  
+如果答案為「是」，那他就是屬於錯誤規則。   
+如果不是...
 
-**Is the rule about code that could be exploited by a hacker?**  
-If so, then it's a Vulnerability rule.  
-If not...
+**是否這條關於程式碼的規則會被駭客利用？ **  
+如果答案為「是」，那他就是屬於漏洞規則。   
+如果不是...
 
-**Is the rule about code that is security-sensitive?**  
-If so, then it's a Security Hotspot rule.  
-If not...
+**是否這條關於程式碼的錯誤對於安全性是敏感的？**  
+如果答案為「是」，那他就是屬於安全疑慮熱點規則。  
+如果不是...
 
-**Is the rule neither a Bug nor a Vulnerability?**  
-If so, then it's a Code Smell rule.
+**是否這個規則不屬於一個錯誤抑或是漏洞？ **  
+如果答案為「是」，那他就是屬於程式碼異味規則。 
 
-## How are severities assigned?
-To assign severity to a rule, we ask a further series of questions. The first one is basically:
+## 嚴重程度如何分配？ 
+分配嚴重程度給規則前，我們問更進一步的系列問題。第一個基本上是： 
 
-**What's the worst thing that could happen?**
+**最糟糕的情況可能是甚麼？**
 
-In answering this question, we try to factor in Murphy's Law without predicting Armageddon.
+在回答這個問題時，我們試著考慮莫非定律而非預測最糟狀況。 
 
-Then we assess whether the impact and likelihood of the Worst Thing (see _How are severity and likelihood decided?_, below) are high or low, and plug the answers into a truth table:
+然後我們評估最糟的狀況的影響與可能性是高或低（_參見底下如何確定嚴重性和可能性_），然後將答案插入真值表：
 
-|          | Impact                 | Likelihood             |
+|          | 影響                    | 可能性                  |
 | -------- | ---------------------- | ---------------------- |
-| Blocker  | ![](/images/check.svg) | ![](/images/check.svg) |
-| Critical | ![](/images/check.svg) | ![](/images/cross.svg) |
-| Major    | ![](/images/cross.svg) | ![](/images/check.svg) |
-| Minor    | ![](/images/cross.svg) | ![](/images/cross.svg) |
+| 封鎖者    | ![](/images/check.svg) | ![](/images/check.svg) |
+| 最嚴重影響 | ![](/images/check.svg) | ![](/images/cross.svg) |
+| 主要影響   | ![](/images/cross.svg) | ![](/images/check.svg) |
+| 次要影響   | ![](/images/cross.svg) | ![](/images/cross.svg) |
 
-## How are severity and likelihood decided?
-To assess the severity of a rule, we start from the Worst Thing (see _How are severities assigned?_, above) and ask category-specific questions.
+## 嚴重性與可能性是如何定義的？
+欲分析一條規則的嚴重性，我們從最糟的事情開始 （請見上文 _嚴重度如何分配？_） 並詢問各類別特定的問題： 
 
-### Bugs
-Impact: **Could the Worst Thing cause the application to crash or to corrupt stored data?**
+### 錯誤
+影響: **最糟的狀況能否造成應用程式崩潰或損毀已儲存的資料？**
 
-Likelihood: **What's the probability that the Worst Thing will happen?**
+可能性: **最嚴重可能發生甚麼事情？**
 
-### Vulnerabilities
-Impact: **Could the exploitation of the Worst Thing result in significant damage to your assets or your users?**
+### 漏洞
+影響: **最糟的狀況的利用會不會對你的資產或你的用戶造成嚴重影響？**
 
-Likelihood: **What is the probability that a hacker will be able to exploit the Worst Thing?**
+可能性: **駭客能利用最糟的狀況的可能性有多大？**
 
-### Security Hotspots
-Security Hotspots are not assigned severities as it is unknown whether there is truly an underlying vulnerability until they are reviewed.
+### 安全疑慮熱點 
+安全疑慮熱點沒有被分配嚴重性因為在對它審查之前不知道是否確實有潛在的漏洞。 
