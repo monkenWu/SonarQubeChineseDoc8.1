@@ -1,139 +1,139 @@
 ---
-title: Issues
+title: 問題 (Issues)
 url: /user-guide/issues/
 ---
 
-While running an analysis, {instance} raises an issue every time a piece of code breaks a coding rule. The set of coding rules is defined through the associated [quality profile](/instance-administration/quality-profiles/) for each language in the project. 
+在執行分析時，{instance}會在每次其中一段程式碼違反編碼規則時提出一個問題。通過項目中每種語言的關聯性[質量配置文件](/instance-administration/quality-profiles/)來定義編碼的規則。
 
-### Issue Types
+### 問題標籤(Issue Types)
 
-There are three types of issues:
+以下有三種不同問題的標籤:
 
-1. **Bug** – A coding error that will break your code and needs to be fixed immediately.
-1. **Vulnerability** – A point in your code that's open to attack.
-1. **Code Smell** – A maintainability issue that makes your code confusing and difficult to maintain.
+1. **錯誤** – 編碼的錯誤將損毀你的程式碼，需要立即的修復。
+1. **漏洞** – 使程式碼中出現一個容易受到攻擊的點。
+1. **程式碼氣味** – 屬於一種可維護性問題，會使你的程式碼混亂且難以維護。
 
-### Issue Severity
+### 問題的嚴重性
 
-Each issue has one of five severities:
+每個問題都可能為以下五種不同嚴重層度之一：
 
-1. **BLOCKER**  
-Bug with a high probability to impact the behavior of the application in production: memory leak, unclosed JDBC connection, .... The code MUST be immediately fixed.
-1. **CRITICAL**  
-Either a bug with a low probability to impact the behavior of the application in production or an issue which represents a security flaw: empty catch block, SQL injection, ... The code MUST be immediately reviewed. 
-1. **MAJOR**  
-Quality flaw which can highly impact the developer productivity: uncovered piece of code, duplicated blocks, unused parameters, ...
-1. **MINOR**  
-Quality flaw which can slightly impact the developer productivity: lines should not be too long, "switch" statements should have at least 3 cases, ...
-1. **INFO**  
-Neither a bug nor a quality flaw, just a finding.
+1. **阻礙**  
+錯誤高機率會影響運作中的應用程序行為：內存洩漏，未關閉的JDBC連接，...。必須立即修復代碼。
+1. **嚴重**  
+錯誤低機率會影響生產的應用程序行為，也可能是表示安全漏洞的問題：沒有抓取到的區塊，SQL注入...。必須立即檢查代碼。
+1. **主要**  
+質量缺陷嚴重影響開發人員的程式撰寫：未發現的片段程式碼，重複的區塊，未使用的參數，...。
+1. **次要**  
+質量缺陷會稍微影響開發人員的程式撰寫：每行書寫不應太長，“switch”語句應至少包含3種情況，...。
+1. **訊息**  
+發現錯誤或質量缺陷並提醒。
 
-Ideally, the team wouldn't introduce any new issues (any new technical debt). [SonarLint](https://sonarlint.org) can help developers because it provides the ability to perform local analyses to check their code before pushing it back to the SCM. But in real life, it's not always possible to code without any new technical debt, and sometimes it's not worth it.
+在理想情況下，團隊不會提出任何新的問題（任何新的技術債務）。[SonarLint](https://sonarlint.org)可以為開發人員提供幫助，因為其具有在將程式碼推回SCM前於本地先進行分析來檢查程式碼的功能；但就現實而言，並不是每次都能在沒有任何新技術債務的情況下進行編碼，甚至根本不值得這麼做。
 
-So new issues get introduced.
+所以也衍生出新的問題。
 
-## Understanding issue context
-Sometimes, issues are self-evident once they're pointed out. For instance, if your team has agreed to a init-lower, camelCase variable naming convention, and an issue is raised on `My_variable`, you don't need a lot of context to understand the problem. But in other situations context may be essential to understanding why an issue was raised. That's why {instance} supports not just the primary issue location, where the issue message is shown, but also secondary issue locations. For instance, secondary issues locations are used to mark the pieces of code in a method which add Cognitive Complexity to a method. 
+## 理解問題的上下文
+有些時候，只要指出問題所在便不言而喻了，舉例來說，如果您的團隊已經同意使用init-lower中的camelCase變量的命名約定，並且在`My_variable`上出現了問題，那麼您不需要太多的上下文就可以了解問題。但在其他情況下，了解為何問題會發生才是更加重要的。這就是{instance}不僅能主要幫忙指出發生的位置（顯示發出消息的位置），還能次要幫忙找出發布位置的原因。例如，次要找出問題位置利用增加方法的認知複雜度來標記方法中的一段程式碼。
 
-But there are times when a simple laundry list of contributing locations isn't enough to understand an issue. For instance, when a null pointer can be dereferenced on some paths through the code, what you really need are issue flows. Each flow is a _set_ of secondary locations ordered to show the exact path through the code on which a problem can happen. And because there can be multiple paths through the code on which, for instance a resource is not released, {instance} supports multiple flows.
+但有時候，僅提供重要位置的簡易長篇敘述不足以理解問題。例如，當空指引與程式碼的路徑無關時，你真正需要的是問題方向。每個方向都是一個次要的標記來顯示可能發生問題的程式碼的確切路徑位置。而且由於程式碼中可能有多個路徑，例如這些路徑上沒有釋放出資源，所以 {instance}需支援多個路徑方向。
 
-## Issues lifecycle
-### Statuses
-After creation, issues flow through a lifecycle, taking one of five possible statuses:
+## 問題的生命週期
+### 身分
+在創建後，問題的方向將連貫在一個生命週期，並採取以下五個可能狀態之一:
 
-* **Open** - set by {instance} on new issues
-* **Confirmed** - set manually to indicate that the issue is valid
-* **Resolved** - set manually to indicate that the next analysis should Close the issue
-* **Reopened** - set automatically by {instance} when a Resolved issue hasn't actually been corrected
-* **Closed** - set automatically by {instance} for automatically created issues. 
+* **公開** - 在一個新的問題上設置{instance}。
+* **已確認** - 手動設定表示為有效問題。
+* **已解決** - 手動設定表示在下一次分析必須解決問題。
+* **重新開啟** - 當尚未找到實際解決問題方法時，由{instance}自動設置。
+* **已關閉** - 由{instance}自動設置為自動創建問題。
 
-### Resolutions
-Closed issues will have one of two resolutions:
+### 決議
+已解決的問題將具有以下兩種解決方法之一：
 
-* **Fixed** - set automatically when a subsequent analysis shows that the issue has been corrected or the file is no longer available (removed from the project, excluded or renamed)
-* **Removed** - set automatically when the related rule is no longer available. The rule may not be available either because it has been removed from the Quality Profile or because the underlying plugin has been uninstalled.
+* **固定** - 當後續分析顯示問題已得到糾正或文件不再可用時自動設置（從項目中刪除，排除或重命名)。
+* **刪除** - 當相關規則不再可長期使用時自動設置。該規則可能無法使用，因為有可能該規則已從“質量配置文件”中刪除或因為基礎的外掛程式已被卸載。
 
-Resolved issues will have one of two resolutions:
-* **False Positive** - set manually
-* **Won't Fix** - set manually
+解決的問題將具有以下兩種解決方法之一:
+* **誤報** - 手動。
+* **無須修復** - 手動。
 
-### Issue Workflow 
-Issues are automatically closed (status: Closed) when:
-* an issue (of any status) has been properly fixed => Resolution: Fixed
-* an issue no longer exists because the related coding rule has been deactived or is no longer available (ie: plugin has been removed) => Resolution: Removed
+### 問題的工作流程 
+在以下的情況下，問題將自動關閉（狀態：已關閉）:
+* 已確認解決（任何狀態）的問題=>解決方案：已修復。
+* 因為相關的編碼規則已被停用或不再可用（即：外掛程式已被刪除），造成問題不再存在=>解決方案：已刪除。
 
-Issues are automatically reopened (status: Reopened) when:
-* an issue that was manually Resolved as Fixed(but Resolution is not False positive) is shown by a subsequent analysis to still exist
+在以下情況下，問題將自動重新打開（狀態：重新打開）:
+* 將問題手動分析為固定(但解決方案並非誤報(False positive))在通過後續分析會顯示仍然存在。
 
-## Understanding which Issues are "New"
-To determine the creation date of an issue, an algorithm is executed during each analysis to determine whether an issue is new or existed previously. This algorithm relies on content hashes (excluding whitespace) for the line the issue is reported on. For multi-line issues, the hash of the first line is used. For each file (after detection of file renaming), the algorithm takes the base list of issues from the previous analysis, and tries to match those issues with the raw issue list reported by the new analysis. The algorithm tries to first match using the strongest evidence, and then falls back to weaker heuristics.
+## 了解哪些問題是"新問題"
+為了確定問題的創建日期，在每次分析過程中都會執行算法以確認該問題是新的問題還是先前就存在的問題。此算法依賴於內容的註記(# hashes)（不包括空格）來報告問題所在的行。 對於多行問題，使用第一行的標記(hash)。對於每個文件（在檢測到文件重命名之後），該算法將採用先前分析的問題基本列表，並新的分析來嘗試將這些問題與原始問題列表報告進行匹配。該算法嘗試先使用最強的證據進行匹配，然後回下降到比較弱的啟發式算法。
 
-* if the issue is on the same rule, with the same line number and with the same line hash (but not necessarily with the same message) > MATCH
-* detect block move inside file, then if the issue is on the same (moved) line and on the same rule (but not necessarily with the same message) > MATCH
-* on the same rule, with the same message and with the same line hash (but not necessarily with the same line) > MATCH
-* on the same rule, with the same message and with the same line number (but not necessarily with the same line hash) > MATCH
-* on the same rule and with the same line hash (but not the same message and not the same line) > MATCH
-* is there a matching **CLOSED** issue > MATCH and Reopen
+* 如果問題基於相同的規則，相同的行號和相同的行哈希（但不一定具有相同的消息）> 吻合。
+* 檢測文件中的區塊移動，如果問題出在同一行（移動）上並且在同一規則上（但不一定帶有相同消息）> 吻合。
+* 根據相同的規則，具有相同的消息和相同的行註記（但不一定具有相同的行）> 吻合。
+* 根據相同的規則，相同的訊息和相同的行號（但不一定具有相同的行註記）> 吻合。
+* 根據相同的規則並具有相同的行註記（但不是同一條訊息，也不是同一行）> 吻合。
+* 是否有配對到**已關閉**的問題 > 匹配並重新開啟。
 
-Unmatched "base" issues are closed as fixed.
+修復並關閉獨一(Unmatched)的"基本"問題。
 
-Unmatched "raw" issues are new.
+新的獨一(Unmatched)的"原始"問題。
 
-## Understanding Issue Backdating
-Once an issue has been determied to be "new", as described above, the next question is what date to give it. For instance, what if it has existed in code for a long time, but only found in the most recent analysis because new rules were added to the profile? Should this issue be given the date of the last change on its line, or the date of the analysis where it was first raised? That is, should it be backdated? If the date of the last change to the line is available (this requires [SCM integration](/analysis/scm-integration/)) then under certain circumstances, the issue will be backdated:
+## 了解問題的追溯
+如上面所述，一旦確定這一個問題為"新的問題"，下一個問題就是發出該新問題的日期。例如，如果它在程式碼中已經存在很長一段時間了，但因為增加了新規則使其在最新一次的分析中才被發現，那該怎麼辦？ 是該提供上次更新的日期，還是首次分析時發現的日期？也就是說，它應該被追溯嗎？如果該行的最後更改日期可用(這需要[SCM的集成](/ analysis / scm-integration /))，則在某些情況下，該問題將被追溯：
 
-* On first analysis of a project or branch
-* When the rule is new in the profile (a brand new rule activated or a rule that was deactivated and is now activated)
-* When the analyzer has just been upgraded (because rule implementations could be smarter now)
-* When the rule is external
+* 在對計畫或分支進行首次分析時。
+* 當文件中的規則是新的規則時(激活了一個新規則或已激活一個之前停用的規則)。
+* 當分析儀器剛升級完成時(因為可以得到更智能的施作規則)。
+* 為外部規則時。
 
-As a consequence, it is possible that backdating will keep newly raised issues out of the New Code Period.
-
-
-## Automatic Issue Assignment
-### For Bug, Vulnerability and Code Smell
-New issues are automatically assigned during analysis to the last committer on the issue line if the committer can be correlated to a {instance} user. Note that currently, issues on any level above a file, e.g. directory / project, cannot be automatically assigned.
-
-### User Correlation
-Login and email correlations are made automatically. I.e. if the user commits with her email address and that email address is part of her {instance} profile, then new issues raised on lines where she was the last committer will be automatically assigned to her.
-
-Additional correlations can be made manually in the user's profile (see "SCM accounts" in Authorization for more).
-
-### Known Limitation
-If the SCM login associated with an issue is longer than 255 characters allowed for an issue author, the author will be left blank.
-
-## Issue edits
-{instance}'s issues workflow can help you manage your issues. There are seven different things you can do to an issue (other than fixing it in the code!): Comment, Assign, Confirm, Change Severity, Resolve, Won't Fix, and False Positive.
-
-These actions break out into three different categories. First up is the "technical review" category.
-
-### Technical Review
-The Confirm, False Positive, Won't Fix, Severity change, and Resolve actions all fall into this category, which presumes an initial review of an issue to verify its validity. Assume it's time to review the technical debt added in the last review period - whether that's a day, a week, or an entire sprint. You go through each new issue and do one:
-
-* **Confirm** - By confirming an issue, you're basically saying "Yep, that's a problem." Doing so moves it out of "Open" status to "Confirmed".
-* **False Positive** - Looking at the issue in context, you realize that for whatever reason, this issue isn't actually a problem. So you mark it False Positive and move on. Requires Administer Issues permission on the project.
-* **Won't Fix** - Looking at the issue in context, you realize that while it's a valid issue it's not one that actually needs fixing. In other words, it represents accepted technical debt. So you mark it Won't Fix and move on. Requires Administer Issues permission on the project.
-* **Severity change** - This is the middle ground between the first two options. Yes, it's a problem, but it's not as bad a problem as the rule's default severity makes it out to be. Or perhaps it's actually far worse. Either way, you adjust the severity of the issue to bring it in line with what you feel it deserves.  Requires Administer Issues permission on the project.
-* **Resolve** - If you think you've fixed an open issue, you can Resolve it. If you're right, the next analysis will move it to closed status. If you're wrong, its status will go to re-opened.
-
-If you tend to mark a lot of issues False Positive or Won't Fix, it means that some coding rules are not appropriate for your context. So, you can either completely deactivate them in the quality profile or use issue exclusions to narrow the focus of the rules so they are not used on specific parts (or types of object) of your application. Similarly, making a lot of severity changes should prompt you to consider updating the rule severities in your profiles.
-
-As you edit issues, the related metrics (e.g. New Bugs), will update automatically, as will the Quality Gate status if it's relevant.
-
-### Dispositioning
-Once issues have been through technical review, it's time to decide who's going to deal them. By default they're assigned to the last committer on the issue line (at the time the issue is raised), but you can certainly reassign them to yourself or someone else. The assignee will receive email notification of the assignment if he signed up for notifications, and the assignment will show up everywhere the issue is displayed, including in the My Issues list in the My Account space.
-
-### General
-At any time during the lifecycle of an issue, you can log a comment on it. Comments are displayed in the issue detail in a running log. You have the ability to edit or delete the comments you made.
-
-You can also edit an issue's tags. Issues inherit the tags of the rules that created them, but the tag set on an issue is fully editable. Tags can be created, added and removed at will for users with the Browse permission on the project.
-
-Although they are initially inherited from the relevant rule, the tags on an issue are not synchronized with the rule, so adding tags to a rule will not add those tags to the rule's issues. 
-
-### Bulk Change
-All of these changes and more can be made to multiple issues at once using the Bulk Change option in the issues search results pane.
+就結果而論，追溯可能會將新提出的問題排除在新法規期限之外。
 
 
-## Purging Closed Issues
-By default, Closed issues are kept for 30 days. For more details, see [Housekeeping](/instance-administration/housekeeping/).
+## 自動分配問題
+### 針對錯誤、漏洞、程式碼氣味
+如果可以將提交者與{instance}用戶產生關聯，在問題線上，新的問題將自動分配給分析中的最後一個提交者。請注意，若問題在任何高於文件等級處，例如:目錄/項目，將無法進行自動分配。
+
+### 用戶相關
+登錄及信箱的關聯是自動生成的。也就是說，如果用戶使用她的電子郵件地址進行提交，並且該電子郵件地址是她的{instance}個人資料的一部分，那麼在她是最後提交者時，新的問題將出現再問題線上並自動分配給她。
+
+其他關連可以在用戶的個人資料端以手動方式設定(有關更多信息，請參見授權中的“ SCM帳戶")。
+
+### 已知的限制
+如果與登錄相關的問題所含字元超過問題作者所允許的255個字元，那作者將被留白。
+
+## 問題的編輯
+{instance}中處理問題的工作流程可以幫助你管理問題。以下有七種你可以針對問題的操作(注意!並不是在程式碼中進行修復):註解，分配，確認，更新嚴重性，解決，無需解決和誤報。
+
+這些操作分為以下三類，第一類為"技術審查"。
+
+### 技術審查
+“確認”，“誤報”，“無需解決”，“更新嚴重性”和“解決”，這些操作均屬於此類別，用於對問題進行了假設性的初步審核以驗證其有效性。假設現在進行對最新一次審查期間所增加的技術性債務-不論是一天、一周、又或是一次完整的衝刺，你遇上任何一個新問題並決定一個方法:
+
+* **確認** - 通過確認問題，您基本上可以確認並說出“是的，這是一個問題”。這樣做會將問題從“發現”的狀態更新到“已確認”。
+* **誤報** - 透過閱讀問題的上下文後，你確認該問題在任何狀況下都不會是一個問題，你可將其註記為誤報並繼續執行程式。這個動作需要有“管理問題”項目的權限。
+* **無需解決** - 透過閱讀問題的上下文後，你確認這是一個有效的問題但並非需要解決，換句話說，這個問題已經確認是技術債務，所以你可以將其標示為無需解決並繼續執行程式。這個動作需要有“管理問題”項目的權限。
+* **更新嚴重性** - 這是前兩個選項的中立，是的，這是一個問題，但並不是規則中所認定的嚴重性而要解決的問題。也有可能是這個問題比事實上更加糟糕，你可以使用任何方式來以自己的感覺更新對該問題的嚴重性。這個動作需要有“管理問題”項目的權限。
+* **解決** - 如果你認為你可以修正這個被發現的問題，你可以解決它。如果你是對的，在下次分析時會將問題移至默認端；如果你是錯的，這個問題狀態將再次出現。
+
+如果您傾向於將很多問題標記為“誤報”或“無法解決”，則意味著某些編碼規目前不適用您現在的情況。所以，你可以在質量配置上完全關閉他們或排除問題來縮小規則的準確度，使其無法用於特定區域(或專案類別)。同樣的，做出太多更新嚴重性應該題示你是否需要更新你配置文件上的規則。
+
+在您編輯問題時，相關指標（例如新錯誤）將自動更新，如果質量檢驗方式有相關，其狀態也會自動更新。
+
+### 配置
+經過技術審查後，就能決定該給誰來解決問題了；在默認情況下，他們會將問題提交給問題線上的最後一位提交者(在問題發生時)，但你也可以決定將它們重新分配給你自己或其他人。如果受理人有註冊到這個通知時，他將接收到分配工作所顯示全部問題位置的信件通知，包括“我的帳戶”區域中的“我的問題”列表中。
+
+### 一般
+在問題的生命週期中，您可以隨時發表評論，該評論用於顯示正在運行日誌中問題的詳細信息。你可以編輯或刪除您的評論。
+
+您還可以編輯問題的標籤。 雖然問題會繼承創建時規則給予的標籤，但是在問題上設定的標籤是可編輯的。 具有項目瀏覽權限的用戶可以隨意創建、添加和刪除標籤。
+
+儘管問題最初是從相關的規則所繼承的，但因問題上的標籤並不會與規則處進行同步，因此將標籤添加到規則的行為不會將這些標籤加入規則問題之中。
+
+### 批量修改
+使用搜索問題的結果窗格中的“批量修改”選項，可以一次對多個問題同時進行更改，甚至更多動作。
+
+
+## 清除已解決的問題
+一般情況下，已解決的問題將保留30天。 有關更多詳細信息，請參見[記憶體整理(Housekeeping)](/instance-administration/housekeeping/)。
 
