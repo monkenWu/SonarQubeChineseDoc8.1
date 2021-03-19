@@ -5,67 +5,68 @@ url: /user-guide/quality-gates/
 
 ## Overview
 
-A quality gate is the best way to enforce a quality policy in your organization.
-It's there to answer ONE question: can I deliver my project to production today or not?
+質量門檻(quality gates)是在組織中實施質量策略的最佳方法。
 
-In order to answer this question, you define a set of Boolean conditions based on measure thresholds against which projects are measured. For example:
+在那裡可以回答一個問題：我可以今天將專案交付生產嗎？
 
-* No new blocker issues
-* Code coverage on new code greater than 80%
+為了回答這個問題，您可以根據測量專案的測量閾值定義一組布林條件。例如：
+
+* 沒有新的阻止程序問題
+* 新的程式碼的代碼覆蓋率大於 80%
 * Etc.
 
-Ideally, all projects will be verified against the same quality gate, but that's not always practical. For instance, you may find that:
+理想情況下，所有專案都將通過相同的質量門檻進行驗證，但這並不一定總是可行的。 例如，您可能會發現：
 
-* Technological implementation differs from one application to another (you might not require the same code coverage on new code for Web or Java applications).
-* You want to ensure stronger requirements on some of your applications (internal frameworks for example).
+* 技術實現因一個應用程式不同（對於Web或Java應用程式，您可能不需要在新程式碼上具有相同的代碼覆蓋率）
+* 您想確保對某些應用程式（例如內部框架）有更嚴格的要求
 * Etc.
 
-Which is why you can define as many quality gates as you wish. Quality Gates are defined and managed in the **[Quality Gates](/#sonarqube#/quality_gates)** page found in the top menu.
+這就是為什麼您可以定義任意數量的質量門檻的原因。 質量門檻是在頂部菜單的“質量門檻”頁面中定義和管理的。
 
-## Use the Best Quality Gate Configuration
+## 使用最佳質量門檻配置
 
-The quality gate "Sonar way" is provided by SonarSource, activated by default and considered as built-in and so read-only. It represents our view of the best way to implement the [Clean as You Code](/user-guide/clean-as-you-code/) concept. At each SonarQube release, we adjust automatically this default quality gate according to SonarQube's capabilities.
+質量門檻“Sonar way”由SonarSource提供，預設情況下處於開通狀態，被視為內建的，因此是只讀的。 它代表了我們對實現“即用即編碼”概念的最佳方法的看法。 在每個SonarQube版本中，我們都會根據SonarQube的功能自動調整此默認質量門檻。
 
-Three metrics allow you to enforce a given Rating of Reliability, Security and Maintainability, not just overall but also on new code. These metrics are recommended and come as part of the default quality gate. We strongly advise you to adjust your own quality gates to use them to make feedback more clear to your developers looking at their quality gate on their project page.
+三種指標可讓您強制執行給定的可靠性等級, 安全性和可維護性，不僅是整體的，而且還包括新程式碼。 建議使用這些度量標準，並將它們作為預設質量門檻的一部分。 我們強烈建議您調整自己的質量門檻，以用它們使開發人員在其專案頁面上查看他們的質量門檻時得到更清晰的回饋。
 
-Don't forget also that quality gate conditions must use differential values. There is no point for example to check an absolute value such as : Number of Lines of Code is greater than 1000.
+也不要忘記高質量的門檻條件必須使用微分值。例如：檢查絕對值是沒有意義的，像是程式碼行數大於1000。
 
-### Recommended Quality Gate
+### 推薦的質量門檻
 
-The `Sonar way` Built-in quality gate is recommended for most projects. If focuses on keeping new code clean, rather than spending a lot of effort remediating old code. Out of the box, it's already set as the default profile.
+對於大多數專案，建議使用“Sonar way`”內建質量門檻，假如專注於保持新程式碼的整潔，而不是花費大量精力來修復舊程式碼，它已經被設置為預設配置文件。
 
-## Quality Gate Status
+## 質量門檻狀態
 
-The current status is displayed prominently at the top of the Project Page:
+當前狀態是顯示在“專案”頁面的頂部：
 
 ![Quality Gate Status](/images/quality-gate-status.jpeg)
 
-## Getting Notified When a Quality Gate Fails
+## 質量門檻失敗時得到通知
 
-Thanks to the notification mechanism, users can be notified when a quality gate fails. To do so, subscribe to the **New quality gate status** notification either for all projects or a set of projects you're interested in.
+借助通知機制，可以在質量門檻失敗時通知用戶。 為此，請為所有專案或您感興趣的一組專案訂閱“新質量門檻狀態”通知。
 
-## Security
+## 安全
 
-Quality Gates can be accessed by any user (even anonymous users). All users can view every aspect of a quality gate.
+任何用戶（甚至是匿名用戶）都可以訪問質量門檻。所有用戶都可以查看質量門檻的各個方面。
 
-To make changes (create, edit or delete) users must be granted the **Administer Quality Profiles and Gates** permission.
+要進行更改（建立，編輯或刪除），必須給予用戶“管理質量配置文件和Gates權限。
 
-A **project administrator** can choose which quality gates his/her project is associated with. See Project Settings for more.
+**專案管理員**可以選擇與他/她的專案相關聯的質量門檻。有關更多信息，請參見專案設置。
 
-## Defining Quality Gates
+## 定義質量門檻
 
-To manage quality gates, go to **[Quality Gates](/#sonarqube#/quality_gates)** (top menu bar).
+要管理質量門檻，請轉到** [質量門檻]（/＃sonarqube＃/ quality_gates）**（頂部菜單欄）。
 
-Each Quality Gate condition is a combination of:
+每個質量門檻條件是以下各項的組合：
 
-* measure
-* comparison operator
-* error value
+* 措施
+* 比較運算符
+* 錯誤值
 
-For instance, a condition might be:
+例如，條件可能是：
 
-* measure: Blocker issue
-* comparison operator: >
-* error value: 0
+* 措施：阻止程序問題
+* 比較運算符：>
+* 錯誤值：0
 
-Which can be stated as: No blocker issues.
+可以這樣表示：沒有阻塞問題。
