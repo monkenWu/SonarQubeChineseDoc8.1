@@ -22,7 +22,8 @@
     "react-helmet": "5.2.0",
     "react-typography": "0.16.19",
     "sonar-ui-common": "0.0.44",
-    "typography": "0.16.19"
+    "typography": "0.16.19",
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "@types/classnames": "2.2.7",
