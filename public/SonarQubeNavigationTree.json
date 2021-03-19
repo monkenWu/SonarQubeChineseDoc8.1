@@ -1,0 +1,158 @@
+[
+  {
+    "title": "Requirements",
+    "children": [
+      "/requirements/requirements/",
+      "/requirements/hardware-recommendations/"
+    ]
+  },
+  {
+    "title": "Analyzing Source Code",
+    "children": [
+      "/analysis/overview/",
+      {
+        "title": "Scanners",
+        "children": [
+          "/analysis/scan/sonarscanner-for-gradle/",
+          "/analysis/scan/sonarscanner-for-msbuild/",
+          "/analysis/scan/sonarscanner-for-maven/",
+          "/analysis/scan/sonarscanner-for-azure-devops/",
+          "/analysis/scan/sonarscanner-for-jenkins/",
+          "/analysis/scan/sonarscanner-for-ant/",
+          "/analysis/scan/sonarscanner/"
+        ]
+      },
+      "/analysis/analysis-parameters/",
+      {
+        "title": "Languages",
+        "children": [
+          "/analysis/languages/overview/",
+          "/analysis/languages/abap/",
+          "/analysis/languages/apex/",
+          "/analysis/languages/csharp/",
+          "/analysis/languages/cfamily/",
+          "/analysis/languages/cobol/",
+          "/analysis/languages/css/",
+          "/analysis/languages/flex/",
+          "/analysis/languages/go/",
+          "/analysis/languages/html/",
+          "/analysis/languages/java/",
+          "/analysis/languages/javascript/",
+          "/analysis/languages/kotlin/",
+          "/analysis/languages/php/",
+          "/analysis/languages/pli/",
+          "/analysis/languages/plsql/",
+          "/analysis/languages/python/",
+          "/analysis/languages/rpg/",
+          "/analysis/languages/ruby/",
+          "/analysis/languages/scala/",
+          "/analysis/languages/swift/",
+          "/analysis/languages/typescript/",
+          "/analysis/languages/tsql/",
+          "/analysis/languages/vbnet/",
+          "/analysis/languages/vb6/",
+          "/analysis/languages/xml/"
+        ]
+      },
+      "/analysis/coverage/",
+      "/analysis/external-issues/",
+      "/analysis/background-tasks/",
+      "/analysis/generic-issue/",
+      "/analysis/generic-test/",
+      {
+        "title": "Pull Request Analysis",
+        "children": [
+		  "/analysis/pull-request/",
+		  "/analysis/pr-decoration/"
+		]
+      },
+      {
+        "title": "Branches",
+        "children": [
+          "/branches/overview/",
+          "/branches/branches-faq/"
+        ]
+      },
+      "/analysis/gitlab-cicd/",
+      "/analysis/scm-integration/",
+      "/analysis/security_configuration/"
+    ]
+  },
+  {
+    "title": "User Guide",
+    "children": [
+      "/user-guide/clean-as-you-code/",
+      "/user-guide/project-page/",
+      "/user-guide/applications/",
+      "/user-guide/portfolios/",
+      "/user-guide/issues/",
+      "/user-guide/security-hotspots/",
+      "/user-guide/rules/",
+      "/user-guide/security-rules/",
+      "/user-guide/built-in-rule-tags/",
+      "/user-guide/quality-gates/",
+      "/user-guide/metric-definitions/",
+      "/user-guide/concepts/",
+      "/user-guide/activity-history/",
+      "/user-guide/visualizations/",
+      "/user-guide/sonarlint-notifications/",
+      "/user-guide/security-reports/",
+      "/user-guide/user-account/",
+      "/user-guide/user-token/",
+      "/user-guide/keyboard-shortcuts/"
+    ]
+  },
+  {
+    "title": "Project Administration",
+    "children": [
+      "/project-administration/project-existence/",
+      "/project-administration/managing-project-history/",
+      "/project-administration/narrowing-the-focus/",
+	  "/project-administration/new-code-period/",
+	  "/project-administration/configuring-portfolios-and-applications/",
+      "/project-administration/portfolio-pdf-configuration/",
+      "/project-administration/project-settings/",
+      "/project-administration/webhooks/"
+    ]
+  },
+  {
+    "title": "Instance Administration",
+    "children": [
+      "/instance-administration/quality-profiles/",
+      "/instance-administration/security/",
+      "/instance-administration/delegated-auth/",
+      "/instance-administration/look-and-feel/",
+      "/instance-administration/marketplace/",
+      "/instance-administration/housekeeping/",
+      "/instance-administration/notifications/",
+      "/instance-administration/system-info/",
+      "/instance-administration/license-manager/",
+      "/instance-administration/monitoring/",
+      "/instance-administration/project-move/",
+      "/instance-administration/custom-measures/",
+      "/instance-administration/compute-engine-performance/",
+      "/instance-administration/db-copy/"
+    ]
+  },
+  {
+    "title": "Extension Guide",
+    "children": [
+      "/extend/web-api/",
+      "/extend/adding-coding-rules/",
+      {
+        "title": "Developing a plugin",
+        "children": [
+          "/extend/developing-plugin/",
+          "/extend/new-languages/",
+          "/extend/executable-lines/",
+          "/extend/extend-web-app/",
+          "/extend/adding-scm/"
+        ]
+      },
+      "/extend/i18n/",
+      "/extend/deploying-to-marketplace/",
+      "/extend/contributing/"
+    ]
+  },
+  "/faq/"
+]
